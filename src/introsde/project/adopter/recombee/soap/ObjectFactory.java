@@ -28,6 +28,7 @@ public class ObjectFactory {
     private final static QName _ModifyRatingResponse_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "modifyRatingResponse");
     private final static QName _AddRating_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "addRating");
     private final static QName _GetItemRatingsResponse_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "getItemRatingsResponse");
+    private final static QName _GetItemResponse_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "getItemResponse");
     private final static QName _AdditemResponse_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "additemResponse");
     private final static QName _GetRec4UserResponse_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "getRec4UserResponse");
     private final static QName _AddUserResponse_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "addUserResponse");
@@ -36,6 +37,7 @@ public class ObjectFactory {
     private final static QName _AddUser_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "addUser");
     private final static QName _Additem_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "additem");
     private final static QName _GetUserRatingsResponse_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "getUserRatingsResponse");
+    private final static QName _GetItem_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "getItem");
     private final static QName _AddRatingResponse_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "addRatingResponse");
     private final static QName _GetUserRatings_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "getUserRatings");
     private final static QName _GetItemRatings_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "getItemRatings");
@@ -78,6 +80,14 @@ public class ObjectFactory {
      */
     public GetUserRatingsResponse createGetUserRatingsResponse() {
         return new GetUserRatingsResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetItem }
+     * 
+     */
+    public GetItem createGetItem() {
+        return new GetItem();
     }
 
     /**
@@ -145,6 +155,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetItemResponse }
+     * 
+     */
+    public GetItemResponse createGetItemResponse() {
+        return new GetItemResponse();
+    }
+
+    /**
      * Create an instance of {@link AdditemResponse }
      * 
      */
@@ -202,6 +220,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://soap.recombee.adopter.project.introsde/", name = "getItemRatingsResponse")
     public JAXBElement<GetItemRatingsResponse> createGetItemRatingsResponse(GetItemRatingsResponse value) {
         return new JAXBElement<GetItemRatingsResponse>(_GetItemRatingsResponse_QNAME, GetItemRatingsResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetItemResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soap.recombee.adopter.project.introsde/", name = "getItemResponse")
+    public JAXBElement<GetItemResponse> createGetItemResponse(GetItemResponse value) {
+        return new JAXBElement<GetItemResponse>(_GetItemResponse_QNAME, GetItemResponse.class, null, value);
     }
 
     /**
@@ -274,6 +301,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://soap.recombee.adopter.project.introsde/", name = "getUserRatingsResponse")
     public JAXBElement<GetUserRatingsResponse> createGetUserRatingsResponse(GetUserRatingsResponse value) {
         return new JAXBElement<GetUserRatingsResponse>(_GetUserRatingsResponse_QNAME, GetUserRatingsResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetItem }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soap.recombee.adopter.project.introsde/", name = "getItem")
+    public JAXBElement<GetItem> createGetItem(GetItem value) {
+        return new JAXBElement<GetItem>(_GetItem_QNAME, GetItem.class, null, value);
     }
 
     /**

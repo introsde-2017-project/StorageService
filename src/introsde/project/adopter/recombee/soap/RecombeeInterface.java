@@ -163,6 +163,24 @@ public interface RecombeeInterface {
 
     /**
      * 
+     * @param itemName
+     * @param dbName
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(name = "String", targetNamespace = "")
+    @RequestWrapper(localName = "getItem", targetNamespace = "http://soap.recombee.adopter.project.introsde/", className = "introsde.project.adopter.recombee.soap.GetItem")
+    @ResponseWrapper(localName = "getItemResponse", targetNamespace = "http://soap.recombee.adopter.project.introsde/", className = "introsde.project.adopter.recombee.soap.GetItemResponse")
+    @Action(input = "http://soap.recombee.adopter.project.introsde/RecombeeInterface/getItemRequest", output = "http://soap.recombee.adopter.project.introsde/RecombeeInterface/getItemResponse")
+    public String getItem(
+        @WebParam(name = "dbName", targetNamespace = "")
+        RecombeeDBType dbName,
+        @WebParam(name = "itemName", targetNamespace = "")
+        String itemName);
+
+    /**
+     * 
      * @param preitem
      * @param dbName
      * @param userId
