@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "RecombeeImplService", targetNamespace = "http://soap.recombee.adopter.project.introsde/", wsdlLocation = "http://recombee-introsde-2018.herokuapp.com/ws/recombee?wsdl")
+@WebServiceClient(name = "RecombeeImplService", targetNamespace = "http://soap.recombee.adopter.project.introsde/", wsdlLocation = "https://recombee-introsde-2018.herokuapp.com/ws/recombee?wsdl")
 public class RecombeeImplService
     extends Service
 {
@@ -30,7 +30,7 @@ public class RecombeeImplService
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://recombee-introsde-2018.herokuapp.com/ws/recombee?wsdl");
+            url = new URL("https://recombee-introsde-2018.herokuapp.com/ws/recombee?wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }

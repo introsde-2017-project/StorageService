@@ -85,13 +85,13 @@ public class RecombeeDB {
 	}
 
 
-	public static boolean addMovie(String itemName, String itemType, String location) {
+	public static String addMovie(String itemName, String itemType, String location) {
 		return serviceInt.additem(movieRecombeeDB, itemName, itemType, location);
 		
 	}
 
 
-	public static boolean addFood(String itemName, String itemType, String location) {
+	public static String addFood(String itemName, String itemType, String location) {
 		return serviceInt.additem(foodRecombeeDB, itemName, itemType,location);
 		
 	}

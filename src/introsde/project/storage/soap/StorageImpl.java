@@ -48,7 +48,7 @@ public class StorageImpl implements StorageInterface {
 	}
 
 	@Override
-	public boolean addNewItem(RecombeeDBType db, String itemName, String itemType, String location) {
+	public String addNewItem(RecombeeDBType db, String itemName, String itemType, String location) {
 		if(db.equals(RecombeeDBType.FOOD_DB)) {
 			return RecombeeDB.addFood(itemName, itemType, location);
 		}

@@ -52,8 +52,8 @@ public interface StorageInterface {
 	///////recombee DB
 	
 	@WebMethod(operationName="addNewItem")
-    @WebResult(name="boolean") 
-	public boolean addNewItem(
+    @WebResult(name="itemId") 
+	public String addNewItem(
 			@WebParam(name="dbName") RecombeeDBType db,
 			@WebParam(name="itemName") String itemName,
 			@WebParam(name="itemType") String itemType,

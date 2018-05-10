@@ -33,14 +33,14 @@ public interface RecombeeInterface {
      * @param dbName
      * @param location
      * @return
-     *     returns boolean
+     *     returns java.lang.String
      */
     @WebMethod
-    @WebResult(name = "boolean", targetNamespace = "")
+    @WebResult(name = "String", targetNamespace = "")
     @RequestWrapper(localName = "additem", targetNamespace = "http://soap.recombee.adopter.project.introsde/", className = "introsde.project.adopter.recombee.soap.Additem")
     @ResponseWrapper(localName = "additemResponse", targetNamespace = "http://soap.recombee.adopter.project.introsde/", className = "introsde.project.adopter.recombee.soap.AdditemResponse")
     @Action(input = "http://soap.recombee.adopter.project.introsde/RecombeeInterface/additemRequest", output = "http://soap.recombee.adopter.project.introsde/RecombeeInterface/additemResponse")
-    public boolean additem(
+    public String additem(
         @WebParam(name = "dbName", targetNamespace = "")
         RecombeeDBType dbName,
         @WebParam(name = "itemId", targetNamespace = "")
