@@ -49,63 +49,38 @@ public class StorageImpl implements StorageInterface {
 
 	@Override
 	public String addNewItem(RecombeeDBType db, String itemName, String itemType, String location) {
-		if(db.equals(RecombeeDBType.FOOD_DB)) {
-			return RecombeeDB.addFood(itemName, itemType, location);
-		}
-		else {
-			return RecombeeDB.addMovie(itemName, itemType, location);
-		}
-		
+		return RecombeeDB.addNewItem(db, itemName, itemType, location);
 	}
 
 	@Override
-	public boolean addNewRating(RecombeeDBType db, Person person, String itemName, double rating, Date time) {
-		if(db.equals(RecombeeDBType.FOOD_DB)) {
-			return RecombeeDB.addFoodRating(itemName, person, rating, time);
-		}
-		else {
-			return RecombeeDB.addMovieRating(itemName, person, rating, time);
-		}
+	public boolean addNewRating(RecombeeDBType db, Person person, String itemName, double rating, Date time) {	
+		return RecombeeDB.addNewRating(db, itemName, person, rating, time);
 	}
 
 	@Override
 	public boolean modifyRating(RecombeeDBType db, Person person, String itemName, double rating, Date time) {
-		if(db.equals(RecombeeDBType.FOOD_DB)) {
-			return RecombeeDB.modifyFoodRating(itemName, person, rating, time);
-		}
-		else {
-			return RecombeeDB.modifyMovieRating(itemName, person, rating, time);
-		}
+		return RecombeeDB.modifyRating(db, itemName, person, rating, time);
 	}
 
 	@Override
-	public List<Evaluation> getItemRatings(RecombeeDBType db, String itemName) {
-		if(db.equals(RecombeeDBType.FOOD_DB)) {
-			return RecombeeDB.getFoodRatings(itemName);
-		}
-		else {
-			return RecombeeDB.getMovieRatings(itemName);
-		}
+	public List<Evaluation> getItemRatings(RecombeeDBType db, String itemName) {	
+		return RecombeeDB.getItemRatings(db,itemName);	
 	}
 
 	@Override
 	public List<Evaluation> getUserRatings(RecombeeDBType db, Person person) {
-		if(db.equals(RecombeeDBType.FOOD_DB)) {
-			return RecombeeDB.getUserFoodRatings(person);
-		}
-		else {
-			return RecombeeDB.getUserMovieRatings(person);
-		}
+		return RecombeeDB.getUserRatings(db,person);
 	}
 
 	@Override
 	public List<String> getRecommendations(RecombeeDBType db, Person person, int quantity) {
-		if(db.equals(RecombeeDBType.FOOD_DB)) {
-			return RecombeeDB.getFoodRec(person, quantity);
-		}
-		else {
-			return RecombeeDB.getMovieRec(person, quantity);
-		}
+		return RecombeeDB.getRec(db,person, quantity);
+		
+	}
+
+	@Override
+	public String getItem(RecombeeDBType db, String itemName) {
+		return RecombeeDB.getItem(db,itemName);
 	}
 	
 }

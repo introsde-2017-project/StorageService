@@ -18,30 +18,21 @@ import introsde.project.data.local.soap.Person;
 public class RecombeeDB {
 	private static RecombeeImplService serviceImp = new RecombeeImplService();
 	private static RecombeeInterface serviceInt= serviceImp.getRecombeeImplPort();
-	private static RecombeeDBType foodRecombeeDB= RecombeeDBType.FOOD_DB;
-	private static RecombeeDBType movieRecombeeDB= RecombeeDBType.MOVIE_DB;
 	
 	
 	public RecombeeDB(){}
 	
 	
-	public static boolean addFoodRating(String itemName, Person person, double rating, Date timestemp) {			
-		return serviceInt.addRating(foodRecombeeDB, Integer.toString(person.getIdPerson()), itemName, rating, DateToXML.GregorianCalendar(timestemp));
-	}
-	public static boolean addMovieRating(String itemName, Person person, double rating, Date timestemp) {			
-		return serviceInt.addRating(movieRecombeeDB, Integer.toString(person.getIdPerson()), itemName, rating, DateToXML.GregorianCalendar(timestemp));
+	public static boolean addNewRating(RecombeeDBType db, String itemName, Person person, double rating, Date timestemp) {			
+		return serviceInt.addRating(db, Integer.toString(person.getIdPerson()), itemName, rating, DateToXML.GregorianCalendar(timestemp));
 	}
 
-
-	public static  List<Evaluation> getFoodRatings(String itemName) {
-		return serviceInt.getItemRatings(foodRecombeeDB, itemName);
-	}
-	public static  List<Evaluation> getMovieRatings(String itemName) {
-		return serviceInt.getItemRatings(movieRecombeeDB, itemName);
+	public static  List<Evaluation> getItemRatings(RecombeeDBType db, String itemName) {
+		return serviceInt.getItemRatings(db, itemName);
 	}
 
 
-	//adding a user in recombee movie database
+	//adding a user in recombee database
 	public static void addUser(Person person) {
 		if(LocalDB.getPersonByU(person.getUserName())==null) 
 			return;
@@ -52,58 +43,43 @@ public class RecombeeDB {
 		for(MovieGen m: person.getMovieGens()) {
 			itemType.add(m.name());
 		}
-		serviceInt.addUser(movieRecombeeDB, Integer.toString(person.getIdPerson()), itemType);
+		serviceInt.addUser(RecombeeDBType.MOVIE_DB, Integer.toString(person.getIdPerson()), itemType);
 
 		//else add user in movie DB
 		itemType= new ArrayList<String>();
 		for(FoodType m: person.getFoodTypes()) {
 			itemType.add(m.name());
 		}
-		serviceInt.addUser(foodRecombeeDB, Integer.toString(person.getIdPerson()), itemType);
+		serviceInt.addUser(RecombeeDBType.FOOD_DB, Integer.toString(person.getIdPerson()), itemType);
 		
 	}
 
 
-	public static  List<String> getMovieRec(Person person, int quantity) {
-		 
-		return serviceInt.getRec4User(movieRecombeeDB, Integer.toString(person.getIdPerson()), quantity);
+	public static  List<String> getRec(RecombeeDBType db, Person person, int quantity) {
+		return serviceInt.getRec4User(db, Integer.toString(person.getIdPerson()), quantity);
 	}
 
 
-	public static  List<String> getFoodRec(Person person, int quantity) {
-		return serviceInt.getRec4User(foodRecombeeDB, Integer.toString(person.getIdPerson()), quantity);
-	}
-
-
-	public static boolean modifyMovieRating(String itemName, Person person, double rating,
+	public static boolean modifyRating(RecombeeDBType db, String itemName, Person person, double rating,
 			Date timestemp) {
-		return serviceInt.modifyRating(movieRecombeeDB, itemName, Integer.toString(person.getIdPerson()), rating, DateToXML.GregorianCalendar(timestemp));
-	}
-	public static boolean modifyFoodRating(String itemName, Person person, double rating,
-			Date timestemp) {
-		return serviceInt.modifyRating(movieRecombeeDB, itemName, Integer.toString(person.getIdPerson()), rating, DateToXML.GregorianCalendar(timestemp));
+		return serviceInt.modifyRating(db, itemName, Integer.toString(person.getIdPerson()), rating, DateToXML.GregorianCalendar(timestemp));
 	}
 
 
-	public static String addMovie(String itemName, String itemType, String location) {
-		return serviceInt.additem(movieRecombeeDB, itemName, itemType, location);
+	public static String addNewItem(RecombeeDBType db, String itemName, String itemType, String location) {
+		return serviceInt.additem(db, itemName, itemType, location);
 		
 	}
 
 
-	public static String addFood(String itemName, String itemType, String location) {
-		return serviceInt.additem(foodRecombeeDB, itemName, itemType,location);
+	public static List<Evaluation> getUserRatings(RecombeeDBType db, Person person) {
+		return serviceInt.getUserRatings(db, Integer.toString(person.getIdPerson()));
+	}
+
+
+	public static String getItem(RecombeeDBType db, String itemName) {
+		return serviceInt.getItem(db, itemName);
 		
-	}
-
-
-	public static List<Evaluation> getUserFoodRatings(Person person) {
-		return serviceInt.getUserRatings(foodRecombeeDB, Integer.toString(person.getIdPerson()));
-	}
-
-
-	public static List<Evaluation> getUserMovieRatings(Person person) {
-		return serviceInt.getUserRatings(movieRecombeeDB, Integer.toString(person.getIdPerson()));
 	}
 
 

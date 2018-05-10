@@ -60,6 +60,13 @@ public interface StorageInterface {
 			@WebParam(name="location") String location
 			);	
 	
+	@WebMethod(operationName="getItem")
+    @WebResult(name="String") 
+	public String getItem(
+			@WebParam(name="dbName") RecombeeDBType db,
+			@WebParam(name="itemName") String itemName
+			);
+	
 	
 	@WebMethod(operationName="addNewRating")
     @WebResult(name="boolean") 
