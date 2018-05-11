@@ -3,11 +3,9 @@ package introsde.project.storage.model;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
-import introsde.project.adopter.recombee.soap.Evaluation;
-import introsde.project.adopter.recombee.soap.RecombeeDBType;
-import introsde.project.adopter.recombee.soap.RecombeeImplService;
-import introsde.project.adopter.recombee.soap.RecombeeInterface;
+import introsde.project.adopter.recombee.soap.*;
 import introsde.project.data.local.soap.FoodType;
 import introsde.project.data.local.soap.MovieGen;
 import introsde.project.data.local.soap.Person;
@@ -77,9 +75,29 @@ public class RecombeeDB {
 	}
 
 
-	public static String getItem(RecombeeDBType db, String itemName) {
-		return serviceInt.getItem(db, itemName);
-		
+	@SuppressWarnings("unchecked")
+	public static Map<String, Object> getItem(RecombeeDBType db, String itemName) {
+		return (Map<String, Object>) serviceInt.getItem(db, itemName);
+	}
+
+
+	public static List<String> getAllItem(RecombeeDBType db) {
+		return serviceInt.getAllItem(db);
+	}
+
+
+	public static List<String> getItemByType(RecombeeDBType db, String itemType) {
+		return serviceInt.getItemsByType(db, itemType);
+	}
+
+
+	public static boolean initDB(RecombeeDBType db) {
+		return serviceInt.initBD(db);
+	}
+
+
+	public static boolean resetDB(RecombeeDBType db) {
+		return serviceInt.resetBD(db);
 	}
 
 

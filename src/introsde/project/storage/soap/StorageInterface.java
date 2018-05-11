@@ -2,6 +2,7 @@ package introsde.project.storage.soap;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -61,10 +62,35 @@ public interface StorageInterface {
 			);	
 	
 	@WebMethod(operationName="getItem")
-    @WebResult(name="String") 
-	public String getItem(
+    @WebResult(name="ListofPropertiesofItems") 
+	public Map<String, Object> getItem(
 			@WebParam(name="dbName") RecombeeDBType db,
 			@WebParam(name="itemName") String itemName
+			);
+	
+	@WebMethod(operationName="getAllItem")
+    @WebResult(name="ListofStrings") 
+	public List<String> getAllItem(
+			@WebParam(name="dbName") RecombeeDBType db
+			);
+	
+	@WebMethod(operationName="getItemByType")
+    @WebResult(name="ListofStrings") 
+	public List<String> getItemByType(
+			@WebParam(name="dbName") RecombeeDBType db,
+			@WebParam(name="itemName") String itemType
+			);
+	
+	@WebMethod(operationName="initDB")
+    @WebResult(name="boolean") 
+	public boolean initDB(
+			@WebParam(name="dbName") RecombeeDBType db
+			);
+	
+	@WebMethod(operationName="resetDB")
+    @WebResult(name="boolean") 
+	public boolean resetDB(
+			@WebParam(name="dbName") RecombeeDBType db
 			);
 	
 	

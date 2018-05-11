@@ -2,6 +2,7 @@ package introsde.project.storage.soap;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import javax.jws.WebService;
 
@@ -79,8 +80,28 @@ public class StorageImpl implements StorageInterface {
 	}
 
 	@Override
-	public String getItem(RecombeeDBType db, String itemName) {
+	public Map<String, Object> getItem(RecombeeDBType db, String itemName) {
 		return RecombeeDB.getItem(db,itemName);
+	}
+
+	@Override
+	public List<String> getAllItem(RecombeeDBType db) {
+		return RecombeeDB.getAllItem(db);
+	}
+
+	@Override
+	public List<String> getItemByType(RecombeeDBType db, String itemType) {
+		return RecombeeDB.getItemByType(db,itemType);
+	}
+
+	@Override
+	public boolean initDB(RecombeeDBType db) {
+		return RecombeeDB.initDB(db);
+	}
+
+	@Override
+	public boolean resetDB(RecombeeDBType db) {
+		return RecombeeDB.resetDB(db);
 	}
 	
 }

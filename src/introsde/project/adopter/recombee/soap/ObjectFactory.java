@@ -25,22 +25,30 @@ import javax.xml.namespace.QName;
 public class ObjectFactory {
 
     private final static QName _Evaluation_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "evaluation");
-    private final static QName _ModifyRatingResponse_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "modifyRatingResponse");
     private final static QName _AddRating_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "addRating");
-    private final static QName _GetItemRatingsResponse_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "getItemRatingsResponse");
-    private final static QName _GetItemResponse_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "getItemResponse");
-    private final static QName _AdditemResponse_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "additemResponse");
     private final static QName _GetRec4UserResponse_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "getRec4UserResponse");
     private final static QName _AddUserResponse_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "addUserResponse");
+    private final static QName _InitBDResponse_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "initBDResponse");
     private final static QName _RecombeeDBType_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "RecombeeDBType");
-    private final static QName _ModifyRating_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "modifyRating");
+    private final static QName _ResetBDResponse_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "resetBDResponse");
     private final static QName _AddUser_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "addUser");
-    private final static QName _Additem_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "additem");
-    private final static QName _GetUserRatingsResponse_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "getUserRatingsResponse");
     private final static QName _GetItem_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "getItem");
     private final static QName _AddRatingResponse_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "addRatingResponse");
     private final static QName _GetUserRatings_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "getUserRatings");
     private final static QName _GetItemRatings_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "getItemRatings");
+    private final static QName _ModifyRatingResponse_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "modifyRatingResponse");
+    private final static QName _GetItemsByTypeResponse_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "getItemsByTypeResponse");
+    private final static QName _GetItemsByType_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "getItemsByType");
+    private final static QName _GetItemRatingsResponse_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "getItemRatingsResponse");
+    private final static QName _GetItemResponse_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "getItemResponse");
+    private final static QName _AdditemResponse_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "additemResponse");
+    private final static QName _ResetBD_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "resetBD");
+    private final static QName _GetAllItem_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "getAllItem");
+    private final static QName _InitBD_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "initBD");
+    private final static QName _ModifyRating_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "modifyRating");
+    private final static QName _Additem_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "additem");
+    private final static QName _GetUserRatingsResponse_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "getUserRatingsResponse");
+    private final static QName _GetAllItemResponse_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "getAllItemResponse");
     private final static QName _GetRec4User_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "getRec4User");
 
     /**
@@ -51,11 +59,35 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ModifyRating }
+     * Create an instance of {@link GetItemResponse }
      * 
      */
-    public ModifyRating createModifyRating() {
-        return new ModifyRating();
+    public GetItemResponse createGetItemResponse() {
+        return new GetItemResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetItemResponse.Map_003cString_002c_0020Object_003e }
+     * 
+     */
+    public GetItemResponse.Map_003cString_002c_0020Object_003e createGetItemResponseMap_003cString_002c_0020Object_003e() {
+        return new GetItemResponse.Map_003cString_002c_0020Object_003e();
+    }
+
+    /**
+     * Create an instance of {@link InitBDResponse }
+     * 
+     */
+    public InitBDResponse createInitBDResponse() {
+        return new InitBDResponse();
+    }
+
+    /**
+     * Create an instance of {@link ResetBDResponse }
+     * 
+     */
+    public ResetBDResponse createResetBDResponse() {
+        return new ResetBDResponse();
     }
 
     /**
@@ -64,22 +96,6 @@ public class ObjectFactory {
      */
     public AddUser createAddUser() {
         return new AddUser();
-    }
-
-    /**
-     * Create an instance of {@link Additem }
-     * 
-     */
-    public Additem createAdditem() {
-        return new Additem();
-    }
-
-    /**
-     * Create an instance of {@link GetUserRatingsResponse }
-     * 
-     */
-    public GetUserRatingsResponse createGetUserRatingsResponse() {
-        return new GetUserRatingsResponse();
     }
 
     /**
@@ -115,14 +131,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetRec4User }
-     * 
-     */
-    public GetRec4User createGetRec4User() {
-        return new GetRec4User();
-    }
-
-    /**
      * Create an instance of {@link Evaluation }
      * 
      */
@@ -131,43 +139,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ModifyRatingResponse }
-     * 
-     */
-    public ModifyRatingResponse createModifyRatingResponse() {
-        return new ModifyRatingResponse();
-    }
-
-    /**
      * Create an instance of {@link AddRating }
      * 
      */
     public AddRating createAddRating() {
         return new AddRating();
-    }
-
-    /**
-     * Create an instance of {@link GetItemRatingsResponse }
-     * 
-     */
-    public GetItemRatingsResponse createGetItemRatingsResponse() {
-        return new GetItemRatingsResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetItemResponse }
-     * 
-     */
-    public GetItemResponse createGetItemResponse() {
-        return new GetItemResponse();
-    }
-
-    /**
-     * Create an instance of {@link AdditemResponse }
-     * 
-     */
-    public AdditemResponse createAdditemResponse() {
-        return new AdditemResponse();
     }
 
     /**
@@ -187,6 +163,118 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ModifyRating }
+     * 
+     */
+    public ModifyRating createModifyRating() {
+        return new ModifyRating();
+    }
+
+    /**
+     * Create an instance of {@link Additem }
+     * 
+     */
+    public Additem createAdditem() {
+        return new Additem();
+    }
+
+    /**
+     * Create an instance of {@link GetUserRatingsResponse }
+     * 
+     */
+    public GetUserRatingsResponse createGetUserRatingsResponse() {
+        return new GetUserRatingsResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetAllItemResponse }
+     * 
+     */
+    public GetAllItemResponse createGetAllItemResponse() {
+        return new GetAllItemResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetRec4User }
+     * 
+     */
+    public GetRec4User createGetRec4User() {
+        return new GetRec4User();
+    }
+
+    /**
+     * Create an instance of {@link ModifyRatingResponse }
+     * 
+     */
+    public ModifyRatingResponse createModifyRatingResponse() {
+        return new ModifyRatingResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetItemsByTypeResponse }
+     * 
+     */
+    public GetItemsByTypeResponse createGetItemsByTypeResponse() {
+        return new GetItemsByTypeResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetItemsByType }
+     * 
+     */
+    public GetItemsByType createGetItemsByType() {
+        return new GetItemsByType();
+    }
+
+    /**
+     * Create an instance of {@link GetItemRatingsResponse }
+     * 
+     */
+    public GetItemRatingsResponse createGetItemRatingsResponse() {
+        return new GetItemRatingsResponse();
+    }
+
+    /**
+     * Create an instance of {@link AdditemResponse }
+     * 
+     */
+    public AdditemResponse createAdditemResponse() {
+        return new AdditemResponse();
+    }
+
+    /**
+     * Create an instance of {@link ResetBD }
+     * 
+     */
+    public ResetBD createResetBD() {
+        return new ResetBD();
+    }
+
+    /**
+     * Create an instance of {@link GetAllItem }
+     * 
+     */
+    public GetAllItem createGetAllItem() {
+        return new GetAllItem();
+    }
+
+    /**
+     * Create an instance of {@link InitBD }
+     * 
+     */
+    public InitBD createInitBD() {
+        return new InitBD();
+    }
+
+    /**
+     * Create an instance of {@link GetItemResponse.Map_003cString_002c_0020Object_003e.Entry }
+     * 
+     */
+    public GetItemResponse.Map_003cString_002c_0020Object_003e.Entry createGetItemResponseMap_003cString_002c_0020Object_003eEntry() {
+        return new GetItemResponse.Map_003cString_002c_0020Object_003e.Entry();
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link Evaluation }{@code >}}
      * 
      */
@@ -196,48 +284,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ModifyRatingResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://soap.recombee.adopter.project.introsde/", name = "modifyRatingResponse")
-    public JAXBElement<ModifyRatingResponse> createModifyRatingResponse(ModifyRatingResponse value) {
-        return new JAXBElement<ModifyRatingResponse>(_ModifyRatingResponse_QNAME, ModifyRatingResponse.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link AddRating }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://soap.recombee.adopter.project.introsde/", name = "addRating")
     public JAXBElement<AddRating> createAddRating(AddRating value) {
         return new JAXBElement<AddRating>(_AddRating_QNAME, AddRating.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetItemRatingsResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://soap.recombee.adopter.project.introsde/", name = "getItemRatingsResponse")
-    public JAXBElement<GetItemRatingsResponse> createGetItemRatingsResponse(GetItemRatingsResponse value) {
-        return new JAXBElement<GetItemRatingsResponse>(_GetItemRatingsResponse_QNAME, GetItemRatingsResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetItemResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://soap.recombee.adopter.project.introsde/", name = "getItemResponse")
-    public JAXBElement<GetItemResponse> createGetItemResponse(GetItemResponse value) {
-        return new JAXBElement<GetItemResponse>(_GetItemResponse_QNAME, GetItemResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AdditemResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://soap.recombee.adopter.project.introsde/", name = "additemResponse")
-    public JAXBElement<AdditemResponse> createAdditemResponse(AdditemResponse value) {
-        return new JAXBElement<AdditemResponse>(_AdditemResponse_QNAME, AdditemResponse.class, null, value);
     }
 
     /**
@@ -259,6 +311,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link InitBDResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soap.recombee.adopter.project.introsde/", name = "initBDResponse")
+    public JAXBElement<InitBDResponse> createInitBDResponse(InitBDResponse value) {
+        return new JAXBElement<InitBDResponse>(_InitBDResponse_QNAME, InitBDResponse.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link RecombeeDBType }{@code >}}
      * 
      */
@@ -268,12 +329,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ModifyRating }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ResetBDResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://soap.recombee.adopter.project.introsde/", name = "modifyRating")
-    public JAXBElement<ModifyRating> createModifyRating(ModifyRating value) {
-        return new JAXBElement<ModifyRating>(_ModifyRating_QNAME, ModifyRating.class, null, value);
+    @XmlElementDecl(namespace = "http://soap.recombee.adopter.project.introsde/", name = "resetBDResponse")
+    public JAXBElement<ResetBDResponse> createResetBDResponse(ResetBDResponse value) {
+        return new JAXBElement<ResetBDResponse>(_ResetBDResponse_QNAME, ResetBDResponse.class, null, value);
     }
 
     /**
@@ -283,24 +344,6 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://soap.recombee.adopter.project.introsde/", name = "addUser")
     public JAXBElement<AddUser> createAddUser(AddUser value) {
         return new JAXBElement<AddUser>(_AddUser_QNAME, AddUser.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Additem }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://soap.recombee.adopter.project.introsde/", name = "additem")
-    public JAXBElement<Additem> createAdditem(Additem value) {
-        return new JAXBElement<Additem>(_Additem_QNAME, Additem.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetUserRatingsResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://soap.recombee.adopter.project.introsde/", name = "getUserRatingsResponse")
-    public JAXBElement<GetUserRatingsResponse> createGetUserRatingsResponse(GetUserRatingsResponse value) {
-        return new JAXBElement<GetUserRatingsResponse>(_GetUserRatingsResponse_QNAME, GetUserRatingsResponse.class, null, value);
     }
 
     /**
@@ -337,6 +380,123 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://soap.recombee.adopter.project.introsde/", name = "getItemRatings")
     public JAXBElement<GetItemRatings> createGetItemRatings(GetItemRatings value) {
         return new JAXBElement<GetItemRatings>(_GetItemRatings_QNAME, GetItemRatings.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ModifyRatingResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soap.recombee.adopter.project.introsde/", name = "modifyRatingResponse")
+    public JAXBElement<ModifyRatingResponse> createModifyRatingResponse(ModifyRatingResponse value) {
+        return new JAXBElement<ModifyRatingResponse>(_ModifyRatingResponse_QNAME, ModifyRatingResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetItemsByTypeResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soap.recombee.adopter.project.introsde/", name = "getItemsByTypeResponse")
+    public JAXBElement<GetItemsByTypeResponse> createGetItemsByTypeResponse(GetItemsByTypeResponse value) {
+        return new JAXBElement<GetItemsByTypeResponse>(_GetItemsByTypeResponse_QNAME, GetItemsByTypeResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetItemsByType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soap.recombee.adopter.project.introsde/", name = "getItemsByType")
+    public JAXBElement<GetItemsByType> createGetItemsByType(GetItemsByType value) {
+        return new JAXBElement<GetItemsByType>(_GetItemsByType_QNAME, GetItemsByType.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetItemRatingsResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soap.recombee.adopter.project.introsde/", name = "getItemRatingsResponse")
+    public JAXBElement<GetItemRatingsResponse> createGetItemRatingsResponse(GetItemRatingsResponse value) {
+        return new JAXBElement<GetItemRatingsResponse>(_GetItemRatingsResponse_QNAME, GetItemRatingsResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetItemResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soap.recombee.adopter.project.introsde/", name = "getItemResponse")
+    public JAXBElement<GetItemResponse> createGetItemResponse(GetItemResponse value) {
+        return new JAXBElement<GetItemResponse>(_GetItemResponse_QNAME, GetItemResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AdditemResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soap.recombee.adopter.project.introsde/", name = "additemResponse")
+    public JAXBElement<AdditemResponse> createAdditemResponse(AdditemResponse value) {
+        return new JAXBElement<AdditemResponse>(_AdditemResponse_QNAME, AdditemResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ResetBD }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soap.recombee.adopter.project.introsde/", name = "resetBD")
+    public JAXBElement<ResetBD> createResetBD(ResetBD value) {
+        return new JAXBElement<ResetBD>(_ResetBD_QNAME, ResetBD.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetAllItem }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soap.recombee.adopter.project.introsde/", name = "getAllItem")
+    public JAXBElement<GetAllItem> createGetAllItem(GetAllItem value) {
+        return new JAXBElement<GetAllItem>(_GetAllItem_QNAME, GetAllItem.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link InitBD }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soap.recombee.adopter.project.introsde/", name = "initBD")
+    public JAXBElement<InitBD> createInitBD(InitBD value) {
+        return new JAXBElement<InitBD>(_InitBD_QNAME, InitBD.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ModifyRating }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soap.recombee.adopter.project.introsde/", name = "modifyRating")
+    public JAXBElement<ModifyRating> createModifyRating(ModifyRating value) {
+        return new JAXBElement<ModifyRating>(_ModifyRating_QNAME, ModifyRating.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Additem }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soap.recombee.adopter.project.introsde/", name = "additem")
+    public JAXBElement<Additem> createAdditem(Additem value) {
+        return new JAXBElement<Additem>(_Additem_QNAME, Additem.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetUserRatingsResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soap.recombee.adopter.project.introsde/", name = "getUserRatingsResponse")
+    public JAXBElement<GetUserRatingsResponse> createGetUserRatingsResponse(GetUserRatingsResponse value) {
+        return new JAXBElement<GetUserRatingsResponse>(_GetUserRatingsResponse_QNAME, GetUserRatingsResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetAllItemResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soap.recombee.adopter.project.introsde/", name = "getAllItemResponse")
+    public JAXBElement<GetAllItemResponse> createGetAllItemResponse(GetAllItemResponse value) {
+        return new JAXBElement<GetAllItemResponse>(_GetAllItemResponse_QNAME, GetAllItemResponse.class, null, value);
     }
 
     /**
