@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Map&lt;String, Object>" minOccurs="0">
+ *         &lt;element name="ListOfPropertiesofItems" minOccurs="0">
  *           &lt;complexType>
  *             &lt;complexContent>
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
@@ -51,35 +51,35 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "getItemResponse", propOrder = {
-    "map003CString002C0020Object003E"
+    "listOfPropertiesofItems"
 })
 public class GetItemResponse {
 
-    @XmlElement(name = "Map<String, Object>")
-    protected GetItemResponse.Map_003cString_002c_0020Object_003e map003CString002C0020Object003E;
+    @XmlElement(name = "ListOfPropertiesofItems")
+    protected GetItemResponse.ListOfPropertiesofItems listOfPropertiesofItems;
 
     /**
-     * Gets the value of the map003CString002C0020Object003E property.
+     * Gets the value of the listOfPropertiesofItems property.
      * 
      * @return
      *     possible object is
-     *     {@link GetItemResponse.Map_003cString_002c_0020Object_003e }
+     *     {@link GetItemResponse.ListOfPropertiesofItems }
      *     
      */
-    public GetItemResponse.Map_003cString_002c_0020Object_003e getMap_003cString_002c_0020Object_003e() {
-        return map003CString002C0020Object003E;
+    public GetItemResponse.ListOfPropertiesofItems getListOfPropertiesofItems() {
+        return listOfPropertiesofItems;
     }
 
     /**
-     * Sets the value of the map003CString002C0020Object003E property.
+     * Sets the value of the listOfPropertiesofItems property.
      * 
      * @param value
      *     allowed object is
-     *     {@link GetItemResponse.Map_003cString_002c_0020Object_003e }
+     *     {@link GetItemResponse.ListOfPropertiesofItems }
      *     
      */
-    public void setMap_003cString_002c_0020Object_003e(GetItemResponse.Map_003cString_002c_0020Object_003e value) {
-        this.map003CString002C0020Object003E = value;
+    public void setListOfPropertiesofItems(GetItemResponse.ListOfPropertiesofItems value) {
+        this.listOfPropertiesofItems = value;
     }
 
 
@@ -117,9 +117,9 @@ public class GetItemResponse {
     @XmlType(name = "", propOrder = {
         "entry"
     })
-    public static class Map_003cString_002c_0020Object_003e {
+    public static class ListOfPropertiesofItems {
 
-        protected List<GetItemResponse.Map_003cString_002c_0020Object_003e.Entry> entry;
+        protected List<GetItemResponse.ListOfPropertiesofItems.Entry> entry;
 
         /**
          * Gets the value of the entry property.
@@ -139,13 +139,13 @@ public class GetItemResponse {
          * 
          * <p>
          * Objects of the following type(s) are allowed in the list
-         * {@link GetItemResponse.Map_003cString_002c_0020Object_003e.Entry }
+         * {@link GetItemResponse.ListOfPropertiesofItems.Entry }
          * 
          * 
          */
-        public List<GetItemResponse.Map_003cString_002c_0020Object_003e.Entry> getEntry() {
+        public List<GetItemResponse.ListOfPropertiesofItems.Entry> getEntry() {
             if (entry == null) {
-                entry = new ArrayList<GetItemResponse.Map_003cString_002c_0020Object_003e.Entry>();
+                entry = new ArrayList<GetItemResponse.ListOfPropertiesofItems.Entry>();
             }
             return this.entry;
         }

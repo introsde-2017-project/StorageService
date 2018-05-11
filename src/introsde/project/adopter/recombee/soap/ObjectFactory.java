@@ -67,11 +67,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetItemResponse.Map_003cString_002c_0020Object_003e }
+     * Create an instance of {@link GetItemResponse.ListOfPropertiesofItems }
      * 
      */
-    public GetItemResponse.Map_003cString_002c_0020Object_003e createGetItemResponseMap_003cString_002c_0020Object_003e() {
-        return new GetItemResponse.Map_003cString_002c_0020Object_003e();
+    public GetItemResponse.ListOfPropertiesofItems createGetItemResponseListOfPropertiesofItems() {
+        return new GetItemResponse.ListOfPropertiesofItems();
     }
 
     /**
@@ -267,11 +267,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetItemResponse.Map_003cString_002c_0020Object_003e.Entry }
+     * Create an instance of {@link GetItemResponse.ListOfPropertiesofItems.Entry }
      * 
      */
-    public GetItemResponse.Map_003cString_002c_0020Object_003e.Entry createGetItemResponseMap_003cString_002c_0020Object_003eEntry() {
-        return new GetItemResponse.Map_003cString_002c_0020Object_003e.Entry();
+    public GetItemResponse.ListOfPropertiesofItems.Entry createGetItemResponseListOfPropertiesofItemsEntry() {
+        return new GetItemResponse.ListOfPropertiesofItems.Entry();
     }
 
     /**

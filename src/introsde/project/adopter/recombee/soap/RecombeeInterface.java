@@ -226,6 +226,24 @@ public interface RecombeeInterface {
 
     /**
      * 
+     * @param itemName
+     * @param dbName
+     * @return
+     *     returns introsde.project.adopter.recombee.soap.GetItemResponse.ListOfPropertiesofItems
+     */
+    @WebMethod
+    @WebResult(name = "ListOfPropertiesofItems", targetNamespace = "")
+    @RequestWrapper(localName = "getItem", targetNamespace = "http://soap.recombee.adopter.project.introsde/", className = "introsde.project.adopter.recombee.soap.GetItem")
+    @ResponseWrapper(localName = "getItemResponse", targetNamespace = "http://soap.recombee.adopter.project.introsde/", className = "introsde.project.adopter.recombee.soap.GetItemResponse")
+    @Action(input = "http://soap.recombee.adopter.project.introsde/RecombeeInterface/getItemRequest", output = "http://soap.recombee.adopter.project.introsde/RecombeeInterface/getItemResponse")
+    public introsde.project.adopter.recombee.soap.GetItemResponse.ListOfPropertiesofItems getItem(
+        @WebParam(name = "dbName", targetNamespace = "")
+        RecombeeDBType dbName,
+        @WebParam(name = "itemName", targetNamespace = "")
+        String itemName);
+
+    /**
+     * 
      * @param preitem
      * @param dbName
      * @param userId
@@ -244,23 +262,5 @@ public interface RecombeeInterface {
         String userId,
         @WebParam(name = "preitem", targetNamespace = "")
         List<String> preitem);
-
-    /**
-     * 
-     * @param itemName
-     * @param dbName
-     * @return
-     *     returns introsde.project.adopter.recombee.soap.GetItemResponse.Map_003cString_002c_0020Object_003e
-     */
-    @WebMethod
-    @WebResult(name = "Map<String, Object>", targetNamespace = "")
-    @RequestWrapper(localName = "getItem", targetNamespace = "http://soap.recombee.adopter.project.introsde/", className = "introsde.project.adopter.recombee.soap.GetItem")
-    @ResponseWrapper(localName = "getItemResponse", targetNamespace = "http://soap.recombee.adopter.project.introsde/", className = "introsde.project.adopter.recombee.soap.GetItemResponse")
-    @Action(input = "http://soap.recombee.adopter.project.introsde/RecombeeInterface/getItemRequest", output = "http://soap.recombee.adopter.project.introsde/RecombeeInterface/getItemResponse")
-    public introsde.project.adopter.recombee.soap.GetItemResponse.Map_003cString_002c_0020Object_003e getItem(
-        @WebParam(name = "dbName", targetNamespace = "")
-        RecombeeDBType dbName,
-        @WebParam(name = "itemName", targetNamespace = "")
-        String itemName);
 
 }
