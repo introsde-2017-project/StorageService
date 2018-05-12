@@ -48,6 +48,11 @@ public class LocalDB {
 		return serviceInt.updatePerson(person);
 	}
 
+
+	public static List<Person> getAllPerson() {
+		return serviceInt.getAllPerson();
+	}
+
 //	public static void addFoodRating(int personId, int foodId, double rating, Date timestemp) throws DatatypeConfigurationException {
 //		GregorianCalendar c = new GregorianCalendar();
 //		c.setTime(timestemp);

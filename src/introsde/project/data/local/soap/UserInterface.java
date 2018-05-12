@@ -57,6 +57,18 @@ public interface UserInterface {
 
     /**
      * 
+     * @return
+     *     returns java.util.List<introsde.project.data.local.soap.Person>
+     */
+    @WebMethod
+    @WebResult(name = "PersonList", targetNamespace = "")
+    @RequestWrapper(localName = "getAllPerson", targetNamespace = "http://soap.local.data.project.introsde/", className = "introsde.project.data.local.soap.GetAllPerson")
+    @ResponseWrapper(localName = "getAllPersonResponse", targetNamespace = "http://soap.local.data.project.introsde/", className = "introsde.project.data.local.soap.GetAllPersonResponse")
+    @Action(input = "http://soap.local.data.project.introsde/UserInterface/getAllPersonRequest", output = "http://soap.local.data.project.introsde/UserInterface/getAllPersonResponse")
+    public List<Person> getAllPerson();
+
+    /**
+     * 
      * @param person
      * @return
      *     returns introsde.project.data.local.soap.Person

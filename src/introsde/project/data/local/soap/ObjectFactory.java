@@ -30,6 +30,7 @@ public class ObjectFactory {
     private final static QName _GetPerson_QNAME = new QName("http://soap.local.data.project.introsde/", "getPerson");
     private final static QName _UpdatePersonResponse_QNAME = new QName("http://soap.local.data.project.introsde/", "updatePersonResponse");
     private final static QName _GetFoodTypesResponse_QNAME = new QName("http://soap.local.data.project.introsde/", "getFoodTypesResponse");
+    private final static QName _GetAllPersonResponse_QNAME = new QName("http://soap.local.data.project.introsde/", "getAllPersonResponse");
     private final static QName _GetPersonResponse_QNAME = new QName("http://soap.local.data.project.introsde/", "getPersonResponse");
     private final static QName _MovieGen_QNAME = new QName("http://soap.local.data.project.introsde/", "movie_Gen");
     private final static QName _AddPerson_QNAME = new QName("http://soap.local.data.project.introsde/", "addPerson");
@@ -37,6 +38,7 @@ public class ObjectFactory {
     private final static QName _GetMovieGensResponse_QNAME = new QName("http://soap.local.data.project.introsde/", "getMovieGensResponse");
     private final static QName _AddPersonResponse_QNAME = new QName("http://soap.local.data.project.introsde/", "addPersonResponse");
     private final static QName _GetFoodTypes_QNAME = new QName("http://soap.local.data.project.introsde/", "getFoodTypes");
+    private final static QName _GetAllPerson_QNAME = new QName("http://soap.local.data.project.introsde/", "getAllPerson");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: introsde.project.data.local.soap
@@ -59,6 +61,14 @@ public class ObjectFactory {
      */
     public GetFoodTypes createGetFoodTypes() {
         return new GetFoodTypes();
+    }
+
+    /**
+     * Create an instance of {@link GetAllPerson }
+     * 
+     */
+    public GetAllPerson createGetAllPerson() {
+        return new GetAllPerson();
     }
 
     /**
@@ -107,6 +117,14 @@ public class ObjectFactory {
      */
     public GetFoodTypesResponse createGetFoodTypesResponse() {
         return new GetFoodTypesResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetAllPersonResponse }
+     * 
+     */
+    public GetAllPersonResponse createGetAllPersonResponse() {
+        return new GetAllPersonResponse();
     }
 
     /**
@@ -188,6 +206,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetAllPersonResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soap.local.data.project.introsde/", name = "getAllPersonResponse")
+    public JAXBElement<GetAllPersonResponse> createGetAllPersonResponse(GetAllPersonResponse value) {
+        return new JAXBElement<GetAllPersonResponse>(_GetAllPersonResponse_QNAME, GetAllPersonResponse.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetPersonResponse }{@code >}}
      * 
      */
@@ -248,6 +275,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://soap.local.data.project.introsde/", name = "getFoodTypes")
     public JAXBElement<GetFoodTypes> createGetFoodTypes(GetFoodTypes value) {
         return new JAXBElement<GetFoodTypes>(_GetFoodTypes_QNAME, GetFoodTypes.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetAllPerson }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soap.local.data.project.introsde/", name = "getAllPerson")
+    public JAXBElement<GetAllPerson> createGetAllPerson(GetAllPerson value) {
+        return new JAXBElement<GetAllPerson>(_GetAllPerson_QNAME, GetAllPerson.class, null, value);
     }
 
 }

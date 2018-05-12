@@ -35,6 +35,9 @@ public interface StorageInterface {
 	public Person getPerson(
 			@WebParam(name="username") String username
 			);
+	@WebMethod(operationName="getAllUser")
+    @WebResult(name="PersonList") 
+	public List<Person> getAllPerson();
 	@WebMethod(operationName="updateUser")
     @WebResult(name="Person") 
 	public Person updatePerson(

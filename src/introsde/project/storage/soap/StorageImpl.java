@@ -103,5 +103,10 @@ public class StorageImpl implements StorageInterface {
 	public boolean resetDB(RecombeeDBType db) {
 		return RecombeeDB.resetDB(db);
 	}
+
+	@Override
+	public List<Person> getAllPerson() {
+		return LocalDB.getAllPerson();
+	}
 	
 }
