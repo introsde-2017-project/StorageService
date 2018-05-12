@@ -21,8 +21,8 @@ public class RecombeeDB {
 	public RecombeeDB(){}
 	
 	
-	public static boolean addNewRating(RecombeeDBType db, String itemName, Person person, double rating, Date timestemp) {			
-		return serviceInt.addRating(db, Integer.toString(person.getIdPerson()), itemName, rating, DateToXML.GregorianCalendar(timestemp));
+	public static boolean addNewRating(RecombeeDBType db, Evaluation rating) {
+		return serviceInt.addRating(db, rating);
 	}
 
 	public static  List<Evaluation> getItemRatings(RecombeeDBType db, String itemName) {

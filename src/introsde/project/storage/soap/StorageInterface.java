@@ -101,10 +101,7 @@ public interface StorageInterface {
     @WebResult(name="boolean") 
     public boolean addNewRating(
     		@WebParam(name="dbName") RecombeeDBType db,
-    		@WebParam(name="person") Person person,
-    		@WebParam(name="itemName") String itemName,
-    		@WebParam(name="rating") double rating,
-    		@WebParam(name="time") Date time
+    		@WebParam(name="evaluation") Evaluation rating
     		);
 	
 	@WebMethod(operationName="modifyRating")

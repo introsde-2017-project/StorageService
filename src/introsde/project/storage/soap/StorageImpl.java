@@ -54,8 +54,8 @@ public class StorageImpl implements StorageInterface {
 	}
 
 	@Override
-	public boolean addNewRating(RecombeeDBType db, Person person, String itemName, double rating, Date time) {	
-		return RecombeeDB.addNewRating(db, itemName, person, rating, time);
+	public boolean addNewRating(RecombeeDBType db, Evaluation rating) {	
+		return RecombeeDB.addNewRating(db, rating);
 	}
 
 	@Override
