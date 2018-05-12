@@ -1,6 +1,5 @@
 package introsde.project.storage.soap;
 
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -59,8 +58,8 @@ public class StorageImpl implements StorageInterface {
 	}
 
 	@Override
-	public boolean modifyRating(RecombeeDBType db, Person person, String itemName, double rating, Date time) {
-		return RecombeeDB.modifyRating(db, itemName, person, rating, time);
+	public boolean modifyRating(RecombeeDBType db, Evaluation rating) {
+		return RecombeeDB.modifyRating(db, rating);
 	}
 
 	@Override
@@ -80,7 +79,7 @@ public class StorageImpl implements StorageInterface {
 	}
 
 	@Override
-	public Map<String, Object> getItem(RecombeeDBType db, String itemName) {
+	public Map<String, String> getItem(RecombeeDBType db, String itemName) {
 		return RecombeeDB.getItem(db,itemName);
 	}
 

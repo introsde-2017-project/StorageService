@@ -1,7 +1,6 @@
 package introsde.project.storage.model;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -58,9 +57,8 @@ public class RecombeeDB {
 	}
 
 
-	public static boolean modifyRating(RecombeeDBType db, String itemName, Person person, double rating,
-			Date timestemp) {
-		return serviceInt.modifyRating(db, itemName, Integer.toString(person.getIdPerson()), rating, DateToXML.GregorianCalendar(timestemp));
+	public static boolean modifyRating(RecombeeDBType db, Evaluation rating) {
+		return serviceInt.modifyRating(db, rating);
 	}
 
 
@@ -76,8 +74,8 @@ public class RecombeeDB {
 
 
 	@SuppressWarnings("unchecked")
-	public static Map<String, Object> getItem(RecombeeDBType db, String itemName) {
-		return (Map<String, Object>) serviceInt.getItem(db, itemName);
+	public static Map<String, String> getItem(RecombeeDBType db, String itemName) {
+		return (Map<String, String>) serviceInt.getItem(db, itemName);
 	}
 
 

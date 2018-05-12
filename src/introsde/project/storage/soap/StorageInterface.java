@@ -1,6 +1,5 @@
 package introsde.project.storage.soap;
 
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -66,7 +65,7 @@ public interface StorageInterface {
 	
 	@WebMethod(operationName="getItem")
     @WebResult(name="ListofPropertiesofItems") 
-	public Map<String, Object> getItem(
+	public Map<String, String> getItem(
 			@WebParam(name="dbName") RecombeeDBType db,
 			@WebParam(name="itemName") String itemName
 			);
@@ -108,10 +107,7 @@ public interface StorageInterface {
     @WebResult(name="boolean") 
     public boolean modifyRating(
     		@WebParam(name="dbName") RecombeeDBType db,
-    		@WebParam(name="person") Person person,
-    		@WebParam(name="itemName") String itemName,
-    		@WebParam(name="rating") double rating,
-    		@WebParam(name="time") Date time
+    		@WebParam(name="evaluation") Evaluation rating
     		);
 	
 	@WebMethod(operationName="getItemRatings")

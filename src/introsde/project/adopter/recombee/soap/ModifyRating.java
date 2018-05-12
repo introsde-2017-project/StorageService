@@ -5,7 +5,6 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -19,10 +18,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="dbName" type="{http://soap.recombee.adopter.project.introsde/}recombeeDBType" minOccurs="0"/>
- *         &lt;element name="userId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="itemId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="rating" type="{http://www.w3.org/2001/XMLSchema}double"/>
- *         &lt;element name="time" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
+ *         &lt;element name="rating" type="{http://soap.recombee.adopter.project.introsde/}evaluation" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -34,20 +30,13 @@ import javax.xml.datatype.XMLGregorianCalendar;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "modifyRating", propOrder = {
     "dbName",
-    "userId",
-    "itemId",
-    "rating",
-    "time"
+    "rating"
 })
 public class ModifyRating {
 
     @XmlSchemaType(name = "string")
     protected RecombeeDBType dbName;
-    protected String userId;
-    protected String itemId;
-    protected double rating;
-    @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar time;
+    protected Evaluation rating;
 
     /**
      * Gets the value of the dbName property.
@@ -74,91 +63,27 @@ public class ModifyRating {
     }
 
     /**
-     * Gets the value of the userId property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getUserId() {
-        return userId;
-    }
-
-    /**
-     * Sets the value of the userId property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setUserId(String value) {
-        this.userId = value;
-    }
-
-    /**
-     * Gets the value of the itemId property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getItemId() {
-        return itemId;
-    }
-
-    /**
-     * Sets the value of the itemId property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setItemId(String value) {
-        this.itemId = value;
-    }
-
-    /**
      * Gets the value of the rating property.
      * 
+     * @return
+     *     possible object is
+     *     {@link Evaluation }
+     *     
      */
-    public double getRating() {
+    public Evaluation getRating() {
         return rating;
     }
 
     /**
      * Sets the value of the rating property.
      * 
-     */
-    public void setRating(double value) {
-        this.rating = value;
-    }
-
-    /**
-     * Gets the value of the time property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getTime() {
-        return time;
-    }
-
-    /**
-     * Sets the value of the time property.
-     * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link Evaluation }
      *     
      */
-    public void setTime(XMLGregorianCalendar value) {
-        this.time = value;
+    public void setRating(Evaluation value) {
+        this.rating = value;
     }
 
 }

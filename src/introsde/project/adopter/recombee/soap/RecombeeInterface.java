@@ -7,7 +7,6 @@ import javax.jws.WebParam;
 import javax.jws.WebResult;
 import javax.jws.WebService;
 import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.datatype.XMLGregorianCalendar;
 import javax.xml.ws.Action;
 import javax.xml.ws.RequestWrapper;
 import javax.xml.ws.ResponseWrapper;
@@ -70,11 +69,8 @@ public interface RecombeeInterface {
 
     /**
      * 
-     * @param itemId
      * @param dbName
      * @param rating
-     * @param time
-     * @param userId
      * @return
      *     returns boolean
      */
@@ -86,14 +82,8 @@ public interface RecombeeInterface {
     public boolean modifyRating(
         @WebParam(name = "dbName", targetNamespace = "")
         RecombeeDBType dbName,
-        @WebParam(name = "userId", targetNamespace = "")
-        String userId,
-        @WebParam(name = "itemId", targetNamespace = "")
-        String itemId,
         @WebParam(name = "rating", targetNamespace = "")
-        double rating,
-        @WebParam(name = "time", targetNamespace = "")
-        XMLGregorianCalendar time);
+        Evaluation rating);
 
     /**
      * 
