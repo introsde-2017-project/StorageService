@@ -1,7 +1,6 @@
 package introsde.project.storage.soap;
 
 import java.util.List;
-import java.util.Map;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -12,6 +11,7 @@ import javax.jws.soap.SOAPBinding.Style;
 import javax.jws.soap.SOAPBinding.Use;
 
 import introsde.project.adopter.recombee.soap.Evaluation;
+import introsde.project.adopter.recombee.soap.ItemObject;
 import introsde.project.adopter.recombee.soap.RecombeeDBType;
 import introsde.project.data.local.soap.FoodType;
 import introsde.project.data.local.soap.MovieGen;
@@ -64,8 +64,8 @@ public interface StorageInterface {
 			);	
 	
 	@WebMethod(operationName="getItem")
-    @WebResult(name="ListofPropertiesofItems") 
-	public Map<String, String> getItem(
+    @WebResult(name="ListofPropertiesofItem") 
+	public ItemObject getItem(
 			@WebParam(name="dbName") RecombeeDBType db,
 			@WebParam(name="itemName") String itemName
 			);

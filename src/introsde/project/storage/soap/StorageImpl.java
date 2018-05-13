@@ -1,11 +1,11 @@
 package introsde.project.storage.soap;
 
 import java.util.List;
-import java.util.Map;
 
 import javax.jws.WebService;
 
 import introsde.project.adopter.recombee.soap.Evaluation;
+import introsde.project.adopter.recombee.soap.ItemObject;
 import introsde.project.adopter.recombee.soap.RecombeeDBType;
 import introsde.project.data.local.soap.FoodType;
 import introsde.project.data.local.soap.MovieGen;
@@ -79,7 +79,7 @@ public class StorageImpl implements StorageInterface {
 	}
 
 	@Override
-	public Map<String, String> getItem(RecombeeDBType db, String itemName) {
+	public ItemObject getItem(RecombeeDBType db, String itemName) {
 		return RecombeeDB.getItem(db,itemName);
 	}
 

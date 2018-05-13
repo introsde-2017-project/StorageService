@@ -2,7 +2,6 @@ package introsde.project.storage.model;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 import introsde.project.adopter.recombee.soap.*;
 import introsde.project.data.local.soap.FoodType;
@@ -72,10 +71,8 @@ public class RecombeeDB {
 		return serviceInt.getUserRatings(db, Integer.toString(person.getIdPerson()));
 	}
 
-
-	@SuppressWarnings("unchecked")
-	public static Map<String, String> getItem(RecombeeDBType db, String itemName) {
-		return (Map<String, String>) serviceInt.getItem(db, itemName);
+	public static ItemObject getItem(RecombeeDBType db, String itemName) {
+		return serviceInt.getItem(db, itemName);
 	}
 
 

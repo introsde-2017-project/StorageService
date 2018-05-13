@@ -45,6 +45,7 @@ public class ObjectFactory {
     private final static QName _ResetBD_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "resetBD");
     private final static QName _GetAllItem_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "getAllItem");
     private final static QName _InitBD_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "initBD");
+    private final static QName _Item_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "item");
     private final static QName _ModifyRating_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "modifyRating");
     private final static QName _Additem_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "additem");
     private final static QName _GetUserRatingsResponse_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "getUserRatingsResponse");
@@ -56,22 +57,6 @@ public class ObjectFactory {
      * 
      */
     public ObjectFactory() {
-    }
-
-    /**
-     * Create an instance of {@link GetItemResponse }
-     * 
-     */
-    public GetItemResponse createGetItemResponse() {
-        return new GetItemResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetItemResponse.ListOfPropertiesofItems }
-     * 
-     */
-    public GetItemResponse.ListOfPropertiesofItems createGetItemResponseListOfPropertiesofItems() {
-        return new GetItemResponse.ListOfPropertiesofItems();
     }
 
     /**
@@ -163,6 +148,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ItemObject }
+     * 
+     */
+    public ItemObject createItemObject() {
+        return new ItemObject();
+    }
+
+    /**
      * Create an instance of {@link ModifyRating }
      * 
      */
@@ -235,6 +228,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetItemResponse }
+     * 
+     */
+    public GetItemResponse createGetItemResponse() {
+        return new GetItemResponse();
+    }
+
+    /**
      * Create an instance of {@link AdditemResponse }
      * 
      */
@@ -264,14 +265,6 @@ public class ObjectFactory {
      */
     public InitBD createInitBD() {
         return new InitBD();
-    }
-
-    /**
-     * Create an instance of {@link GetItemResponse.ListOfPropertiesofItems.Entry }
-     * 
-     */
-    public GetItemResponse.ListOfPropertiesofItems.Entry createGetItemResponseListOfPropertiesofItemsEntry() {
-        return new GetItemResponse.ListOfPropertiesofItems.Entry();
     }
 
     /**
@@ -461,6 +454,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://soap.recombee.adopter.project.introsde/", name = "initBD")
     public JAXBElement<InitBD> createInitBD(InitBD value) {
         return new JAXBElement<InitBD>(_InitBD_QNAME, InitBD.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ItemObject }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soap.recombee.adopter.project.introsde/", name = "item")
+    public JAXBElement<ItemObject> createItem(ItemObject value) {
+        return new JAXBElement<ItemObject>(_Item_QNAME, ItemObject.class, null, value);
     }
 
     /**

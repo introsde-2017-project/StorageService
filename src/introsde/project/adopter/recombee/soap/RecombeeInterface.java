@@ -210,14 +210,14 @@ public interface RecombeeInterface {
      * @param itemName
      * @param dbName
      * @return
-     *     returns introsde.project.adopter.recombee.soap.GetItemResponse.ListOfPropertiesofItems
+     *     returns introsde.project.adopter.recombee.soap.ItemObject
      */
     @WebMethod
     @WebResult(name = "ListOfPropertiesofItems", targetNamespace = "")
     @RequestWrapper(localName = "getItem", targetNamespace = "http://soap.recombee.adopter.project.introsde/", className = "introsde.project.adopter.recombee.soap.GetItem")
     @ResponseWrapper(localName = "getItemResponse", targetNamespace = "http://soap.recombee.adopter.project.introsde/", className = "introsde.project.adopter.recombee.soap.GetItemResponse")
     @Action(input = "http://soap.recombee.adopter.project.introsde/RecombeeInterface/getItemRequest", output = "http://soap.recombee.adopter.project.introsde/RecombeeInterface/getItemResponse")
-    public introsde.project.adopter.recombee.soap.GetItemResponse.ListOfPropertiesofItems getItem(
+    public ItemObject getItem(
         @WebParam(name = "dbName", targetNamespace = "")
         RecombeeDBType dbName,
         @WebParam(name = "itemName", targetNamespace = "")
