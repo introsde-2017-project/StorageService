@@ -107,5 +107,10 @@ public class StorageImpl implements StorageInterface {
 	public List<Person> getAllPerson() {
 		return LocalDB.getAllPerson();
 	}
+
+	@Override
+	public Person getPersonByToken(String token) {
+		return LocalDB.getPersonByToken(token);
+	}
 	
 }

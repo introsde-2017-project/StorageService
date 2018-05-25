@@ -24,9 +24,10 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _GetPersonByTokenResponse_QNAME = new QName("http://soap.local.data.project.introsde/", "getPersonByTokenResponse");
     private final static QName _FoodType_QNAME = new QName("http://soap.local.data.project.introsde/", "food_Type");
-    private final static QName _UpdatePerson_QNAME = new QName("http://soap.local.data.project.introsde/", "updatePerson");
     private final static QName _Person_QNAME = new QName("http://soap.local.data.project.introsde/", "Person");
+    private final static QName _UpdatePerson_QNAME = new QName("http://soap.local.data.project.introsde/", "updatePerson");
     private final static QName _GetPerson_QNAME = new QName("http://soap.local.data.project.introsde/", "getPerson");
     private final static QName _UpdatePersonResponse_QNAME = new QName("http://soap.local.data.project.introsde/", "updatePersonResponse");
     private final static QName _GetFoodTypesResponse_QNAME = new QName("http://soap.local.data.project.introsde/", "getFoodTypesResponse");
@@ -38,6 +39,7 @@ public class ObjectFactory {
     private final static QName _GetMovieGensResponse_QNAME = new QName("http://soap.local.data.project.introsde/", "getMovieGensResponse");
     private final static QName _AddPersonResponse_QNAME = new QName("http://soap.local.data.project.introsde/", "addPersonResponse");
     private final static QName _GetFoodTypes_QNAME = new QName("http://soap.local.data.project.introsde/", "getFoodTypes");
+    private final static QName _GetPersonByToken_QNAME = new QName("http://soap.local.data.project.introsde/", "getPersonByToken");
     private final static QName _GetAllPerson_QNAME = new QName("http://soap.local.data.project.introsde/", "getAllPerson");
 
     /**
@@ -61,6 +63,14 @@ public class ObjectFactory {
      */
     public GetFoodTypes createGetFoodTypes() {
         return new GetFoodTypes();
+    }
+
+    /**
+     * Create an instance of {@link GetPersonByToken }
+     * 
+     */
+    public GetPersonByToken createGetPersonByToken() {
+        return new GetPersonByToken();
     }
 
     /**
@@ -136,11 +146,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link UpdatePerson }
+     * Create an instance of {@link GetPersonByTokenResponse }
      * 
      */
-    public UpdatePerson createUpdatePerson() {
-        return new UpdatePerson();
+    public GetPersonByTokenResponse createGetPersonByTokenResponse() {
+        return new GetPersonByTokenResponse();
     }
 
     /**
@@ -149,6 +159,23 @@ public class ObjectFactory {
      */
     public Person createPerson() {
         return new Person();
+    }
+
+    /**
+     * Create an instance of {@link UpdatePerson }
+     * 
+     */
+    public UpdatePerson createUpdatePerson() {
+        return new UpdatePerson();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetPersonByTokenResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soap.local.data.project.introsde/", name = "getPersonByTokenResponse")
+    public JAXBElement<GetPersonByTokenResponse> createGetPersonByTokenResponse(GetPersonByTokenResponse value) {
+        return new JAXBElement<GetPersonByTokenResponse>(_GetPersonByTokenResponse_QNAME, GetPersonByTokenResponse.class, null, value);
     }
 
     /**
@@ -161,21 +188,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UpdatePerson }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://soap.local.data.project.introsde/", name = "updatePerson")
-    public JAXBElement<UpdatePerson> createUpdatePerson(UpdatePerson value) {
-        return new JAXBElement<UpdatePerson>(_UpdatePerson_QNAME, UpdatePerson.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link Person }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://soap.local.data.project.introsde/", name = "Person")
     public JAXBElement<Person> createPerson(Person value) {
         return new JAXBElement<Person>(_Person_QNAME, Person.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link UpdatePerson }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soap.local.data.project.introsde/", name = "updatePerson")
+    public JAXBElement<UpdatePerson> createUpdatePerson(UpdatePerson value) {
+        return new JAXBElement<UpdatePerson>(_UpdatePerson_QNAME, UpdatePerson.class, null, value);
     }
 
     /**
@@ -275,6 +302,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://soap.local.data.project.introsde/", name = "getFoodTypes")
     public JAXBElement<GetFoodTypes> createGetFoodTypes(GetFoodTypes value) {
         return new JAXBElement<GetFoodTypes>(_GetFoodTypes_QNAME, GetFoodTypes.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetPersonByToken }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soap.local.data.project.introsde/", name = "getPersonByToken")
+    public JAXBElement<GetPersonByToken> createGetPersonByToken(GetPersonByToken value) {
+        return new JAXBElement<GetPersonByToken>(_GetPersonByToken_QNAME, GetPersonByToken.class, null, value);
     }
 
     /**

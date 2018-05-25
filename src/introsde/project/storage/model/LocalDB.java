@@ -53,6 +53,11 @@ public class LocalDB {
 		return serviceInt.getAllPerson();
 	}
 
+
+	public static Person getPersonByToken(String token) {
+		return serviceInt.getPersonByToken(token);
+	}
+
 //	public static void addFoodRating(int personId, int foodId, double rating, Date timestemp) throws DatatypeConfigurationException {
 //		GregorianCalendar c = new GregorianCalendar();
 //		c.setTime(timestemp);
