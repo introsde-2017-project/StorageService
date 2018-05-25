@@ -28,8 +28,8 @@ public class ObjectFactory {
     private final static QName _AddRating_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "addRating");
     private final static QName _GetRec4UserResponse_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "getRec4UserResponse");
     private final static QName _AddUserResponse_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "addUserResponse");
-    private final static QName _InitBDResponse_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "initBDResponse");
     private final static QName _RecombeeDBType_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "RecombeeDBType");
+    private final static QName _InitBDResponse_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "initBDResponse");
     private final static QName _ResetBDResponse_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "resetBDResponse");
     private final static QName _AddUser_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "addUser");
     private final static QName _GetItem_QNAME = new QName("http://soap.recombee.adopter.project.introsde/", "getItem");
@@ -304,21 +304,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link InitBDResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://soap.recombee.adopter.project.introsde/", name = "initBDResponse")
-    public JAXBElement<InitBDResponse> createInitBDResponse(InitBDResponse value) {
-        return new JAXBElement<InitBDResponse>(_InitBDResponse_QNAME, InitBDResponse.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link RecombeeDBType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://soap.recombee.adopter.project.introsde/", name = "RecombeeDBType")
     public JAXBElement<RecombeeDBType> createRecombeeDBType(RecombeeDBType value) {
         return new JAXBElement<RecombeeDBType>(_RecombeeDBType_QNAME, RecombeeDBType.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link InitBDResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soap.recombee.adopter.project.introsde/", name = "initBDResponse")
+    public JAXBElement<InitBDResponse> createInitBDResponse(InitBDResponse value) {
+        return new JAXBElement<InitBDResponse>(_InitBDResponse_QNAME, InitBDResponse.class, null, value);
     }
 
     /**
