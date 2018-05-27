@@ -132,7 +132,7 @@ public interface StorageInterface {
 	
 	@WebMethod(operationName="getRec4User")
     @WebResult(name="recommendations") 
-    public List<String> getRecommendations(
+    public List<ItemObject> getRecommendations(
     		@WebParam(name="dbName") RecombeeDBType db,
     		@WebParam(name="person") Person person,
     		@WebParam(name="quantity") int quantity

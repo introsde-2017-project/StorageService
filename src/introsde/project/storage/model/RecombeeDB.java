@@ -51,7 +51,7 @@ public class RecombeeDB {
 	}
 
 
-	public static  List<String> getRec(RecombeeDBType db, Person person, int quantity) {
+	public static  List<ItemObject> getRec(RecombeeDBType db, Person person, int quantity) {
 		return serviceInt.getRec4User(db, Integer.toString(person.getIdPerson()), quantity);
 	}
 

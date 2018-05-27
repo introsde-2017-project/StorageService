@@ -73,7 +73,7 @@ public class StorageImpl implements StorageInterface {
 	}
 
 	@Override
-	public List<String> getRecommendations(RecombeeDBType db, Person person, int quantity) {
+	public List<ItemObject> getRecommendations(RecombeeDBType db, Person person, int quantity) {
 		return RecombeeDB.getRec(db,person, quantity);
 		
 	}
