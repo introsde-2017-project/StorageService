@@ -26,8 +26,8 @@ public class ObjectFactory {
 
     private final static QName _GetPersonByTokenResponse_QNAME = new QName("http://soap.local.data.project.introsde/", "getPersonByTokenResponse");
     private final static QName _FoodType_QNAME = new QName("http://soap.local.data.project.introsde/", "food_Type");
-    private final static QName _Person_QNAME = new QName("http://soap.local.data.project.introsde/", "Person");
     private final static QName _UpdatePerson_QNAME = new QName("http://soap.local.data.project.introsde/", "updatePerson");
+    private final static QName _Person_QNAME = new QName("http://soap.local.data.project.introsde/", "Person");
     private final static QName _GetPerson_QNAME = new QName("http://soap.local.data.project.introsde/", "getPerson");
     private final static QName _UpdatePersonResponse_QNAME = new QName("http://soap.local.data.project.introsde/", "updatePersonResponse");
     private final static QName _GetFoodTypesResponse_QNAME = new QName("http://soap.local.data.project.introsde/", "getFoodTypesResponse");
@@ -154,19 +154,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Person }
-     * 
-     */
-    public Person createPerson() {
-        return new Person();
-    }
-
-    /**
      * Create an instance of {@link UpdatePerson }
      * 
      */
     public UpdatePerson createUpdatePerson() {
         return new UpdatePerson();
+    }
+
+    /**
+     * Create an instance of {@link Person }
+     * 
+     */
+    public Person createPerson() {
+        return new Person();
     }
 
     /**
@@ -188,21 +188,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Person }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://soap.local.data.project.introsde/", name = "Person")
-    public JAXBElement<Person> createPerson(Person value) {
-        return new JAXBElement<Person>(_Person_QNAME, Person.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link UpdatePerson }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://soap.local.data.project.introsde/", name = "updatePerson")
     public JAXBElement<UpdatePerson> createUpdatePerson(UpdatePerson value) {
         return new JAXBElement<UpdatePerson>(_UpdatePerson_QNAME, UpdatePerson.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Person }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soap.local.data.project.introsde/", name = "Person")
+    public JAXBElement<Person> createPerson(Person value) {
+        return new JAXBElement<Person>(_Person_QNAME, Person.class, null, value);
     }
 
     /**

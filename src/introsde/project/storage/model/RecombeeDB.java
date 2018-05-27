@@ -37,14 +37,14 @@ public class RecombeeDB {
 		
 		//if add a user in food recombee data base
 		for(MovieGen m: person.getMovieGens()) {
-			itemType.add(m.name());
+			itemType.add(m.value());
 		}
 		serviceInt.addUser(RecombeeDBType.MOVIE_DB, Integer.toString(person.getIdPerson()), itemType);
 
 		//else add user in movie DB
 		itemType= new ArrayList<String>();
 		for(FoodType m: person.getFoodTypes()) {
-			itemType.add(m.name());
+			itemType.add(m.value());
 		}
 		serviceInt.addUser(RecombeeDBType.FOOD_DB, Integer.toString(person.getIdPerson()), itemType);
 		
