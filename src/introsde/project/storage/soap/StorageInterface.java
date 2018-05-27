@@ -62,7 +62,7 @@ public interface StorageInterface {
 	
 	@WebMethod(operationName="addNewItem")
     @WebResult(name="itemId") 
-	public String addNewItem(
+	public ItemObject addNewItem(
 			@WebParam(name="dbName") RecombeeDBType db,
 			@WebParam(name="itemName") String itemName,
 			@WebParam(name="itemType") String itemType,
@@ -78,13 +78,13 @@ public interface StorageInterface {
 	
 	@WebMethod(operationName="getAllItem")
     @WebResult(name="ListofStrings") 
-	public List<String> getAllItem(
+	public List<ItemObject> getAllItem(
 			@WebParam(name="dbName") RecombeeDBType db
 			);
 	
 	@WebMethod(operationName="getItemByType")
     @WebResult(name="ListofStrings") 
-	public List<String> getItemByType(
+	public List<ItemObject> getItemByType(
 			@WebParam(name="dbName") RecombeeDBType db,
 			@WebParam(name="itemName") String itemType
 			);
@@ -132,7 +132,7 @@ public interface StorageInterface {
 	
 	@WebMethod(operationName="getRec4User")
     @WebResult(name="recommendations") 
-    public List<String> getRecommendations(
+    public List<ItemObject> getRecommendations(
     		@WebParam(name="dbName") RecombeeDBType db,
     		@WebParam(name="person") Person person,
     		@WebParam(name="quantity") int quantity

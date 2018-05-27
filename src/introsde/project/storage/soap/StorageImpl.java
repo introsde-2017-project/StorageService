@@ -48,7 +48,7 @@ public class StorageImpl implements StorageInterface {
 	}
 
 	@Override
-	public String addNewItem(RecombeeDBType db, String itemName, String itemType, String location) {
+	public ItemObject addNewItem(RecombeeDBType db, String itemName, String itemType, String location) {
 		return RecombeeDB.addNewItem(db, itemName, itemType, location);
 	}
 
@@ -73,7 +73,7 @@ public class StorageImpl implements StorageInterface {
 	}
 
 	@Override
-	public List<String> getRecommendations(RecombeeDBType db, Person person, int quantity) {
+	public List<ItemObject> getRecommendations(RecombeeDBType db, Person person, int quantity) {
 		return RecombeeDB.getRec(db,person, quantity);
 		
 	}
@@ -84,12 +84,12 @@ public class StorageImpl implements StorageInterface {
 	}
 
 	@Override
-	public List<String> getAllItem(RecombeeDBType db) {
+	public List<ItemObject> getAllItem(RecombeeDBType db) {
 		return RecombeeDB.getAllItem(db);
 	}
 
 	@Override
-	public List<String> getItemByType(RecombeeDBType db, String itemType) {
+	public List<ItemObject> getItemByType(RecombeeDBType db, String itemType) {
 		return RecombeeDB.getItemByType(db,itemType);
 	}
 

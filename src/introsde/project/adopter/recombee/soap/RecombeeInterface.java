@@ -27,30 +27,6 @@ public interface RecombeeInterface {
 
     /**
      * 
-     * @param itemId
-     * @param itemType
-     * @param dbName
-     * @param location
-     * @return
-     *     returns java.lang.String
-     */
-    @WebMethod
-    @WebResult(name = "String", targetNamespace = "")
-    @RequestWrapper(localName = "additem", targetNamespace = "http://soap.recombee.adopter.project.introsde/", className = "introsde.project.adopter.recombee.soap.Additem")
-    @ResponseWrapper(localName = "additemResponse", targetNamespace = "http://soap.recombee.adopter.project.introsde/", className = "introsde.project.adopter.recombee.soap.AdditemResponse")
-    @Action(input = "http://soap.recombee.adopter.project.introsde/RecombeeInterface/additemRequest", output = "http://soap.recombee.adopter.project.introsde/RecombeeInterface/additemResponse")
-    public String additem(
-        @WebParam(name = "dbName", targetNamespace = "")
-        RecombeeDBType dbName,
-        @WebParam(name = "itemId", targetNamespace = "")
-        String itemId,
-        @WebParam(name = "itemType", targetNamespace = "")
-        String itemType,
-        @WebParam(name = "location", targetNamespace = "")
-        String location);
-
-    /**
-     * 
      * @param dbName
      * @param rating
      * @return
@@ -66,6 +42,30 @@ public interface RecombeeInterface {
         RecombeeDBType dbName,
         @WebParam(name = "rating", targetNamespace = "")
         Evaluation rating);
+
+    /**
+     * 
+     * @param itemId
+     * @param itemType
+     * @param dbName
+     * @param location
+     * @return
+     *     returns introsde.project.adopter.recombee.soap.ItemObject
+     */
+    @WebMethod
+    @WebResult(name = "String", targetNamespace = "")
+    @RequestWrapper(localName = "additem", targetNamespace = "http://soap.recombee.adopter.project.introsde/", className = "introsde.project.adopter.recombee.soap.Additem")
+    @ResponseWrapper(localName = "additemResponse", targetNamespace = "http://soap.recombee.adopter.project.introsde/", className = "introsde.project.adopter.recombee.soap.AdditemResponse")
+    @Action(input = "http://soap.recombee.adopter.project.introsde/RecombeeInterface/additemRequest", output = "http://soap.recombee.adopter.project.introsde/RecombeeInterface/additemResponse")
+    public ItemObject additem(
+        @WebParam(name = "dbName", targetNamespace = "")
+        RecombeeDBType dbName,
+        @WebParam(name = "itemId", targetNamespace = "")
+        String itemId,
+        @WebParam(name = "itemType", targetNamespace = "")
+        String itemType,
+        @WebParam(name = "location", targetNamespace = "")
+        String location);
 
     /**
      * 
@@ -127,14 +127,14 @@ public interface RecombeeInterface {
      * @param dbName
      * @param userId
      * @return
-     *     returns java.util.List<java.lang.String>
+     *     returns java.util.List<introsde.project.adopter.recombee.soap.ItemObject>
      */
     @WebMethod
     @WebResult(name = "recommendations", targetNamespace = "")
     @RequestWrapper(localName = "getRec4User", targetNamespace = "http://soap.recombee.adopter.project.introsde/", className = "introsde.project.adopter.recombee.soap.GetRec4User")
     @ResponseWrapper(localName = "getRec4UserResponse", targetNamespace = "http://soap.recombee.adopter.project.introsde/", className = "introsde.project.adopter.recombee.soap.GetRec4UserResponse")
     @Action(input = "http://soap.recombee.adopter.project.introsde/RecombeeInterface/getRec4UserRequest", output = "http://soap.recombee.adopter.project.introsde/RecombeeInterface/getRec4UserResponse")
-    public List<String> getRec4User(
+    public List<ItemObject> getRec4User(
         @WebParam(name = "dbName", targetNamespace = "")
         RecombeeDBType dbName,
         @WebParam(name = "userId", targetNamespace = "")
@@ -147,14 +147,14 @@ public interface RecombeeInterface {
      * @param itemName
      * @param dbName
      * @return
-     *     returns java.util.List<java.lang.String>
+     *     returns java.util.List<introsde.project.adopter.recombee.soap.ItemObject>
      */
     @WebMethod
     @WebResult(name = "StringList", targetNamespace = "")
     @RequestWrapper(localName = "getItemsByType", targetNamespace = "http://soap.recombee.adopter.project.introsde/", className = "introsde.project.adopter.recombee.soap.GetItemsByType")
     @ResponseWrapper(localName = "getItemsByTypeResponse", targetNamespace = "http://soap.recombee.adopter.project.introsde/", className = "introsde.project.adopter.recombee.soap.GetItemsByTypeResponse")
     @Action(input = "http://soap.recombee.adopter.project.introsde/RecombeeInterface/getItemsByTypeRequest", output = "http://soap.recombee.adopter.project.introsde/RecombeeInterface/getItemsByTypeResponse")
-    public List<String> getItemsByType(
+    public List<ItemObject> getItemsByType(
         @WebParam(name = "dbName", targetNamespace = "")
         RecombeeDBType dbName,
         @WebParam(name = "itemName", targetNamespace = "")
@@ -164,14 +164,14 @@ public interface RecombeeInterface {
      * 
      * @param dbName
      * @return
-     *     returns java.util.List<java.lang.String>
+     *     returns java.util.List<introsde.project.adopter.recombee.soap.ItemObject>
      */
     @WebMethod
     @WebResult(name = "StringList", targetNamespace = "")
     @RequestWrapper(localName = "getAllItem", targetNamespace = "http://soap.recombee.adopter.project.introsde/", className = "introsde.project.adopter.recombee.soap.GetAllItem")
     @ResponseWrapper(localName = "getAllItemResponse", targetNamespace = "http://soap.recombee.adopter.project.introsde/", className = "introsde.project.adopter.recombee.soap.GetAllItemResponse")
     @Action(input = "http://soap.recombee.adopter.project.introsde/RecombeeInterface/getAllItemRequest", output = "http://soap.recombee.adopter.project.introsde/RecombeeInterface/getAllItemResponse")
-    public List<String> getAllItem(
+    public List<ItemObject> getAllItem(
         @WebParam(name = "dbName", targetNamespace = "")
         RecombeeDBType dbName);
 

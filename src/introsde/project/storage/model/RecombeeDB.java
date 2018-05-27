@@ -51,7 +51,7 @@ public class RecombeeDB {
 	}
 
 
-	public static  List<String> getRec(RecombeeDBType db, Person person, int quantity) {
+	public static  List<ItemObject> getRec(RecombeeDBType db, Person person, int quantity) {
 		return serviceInt.getRec4User(db, Integer.toString(person.getIdPerson()), quantity);
 	}
 
@@ -61,7 +61,7 @@ public class RecombeeDB {
 	}
 
 
-	public static String addNewItem(RecombeeDBType db, String itemName, String itemType, String location) {
+	public static ItemObject addNewItem(RecombeeDBType db, String itemName, String itemType, String location) {
 		return serviceInt.additem(db, itemName, itemType, location);
 		
 	}
@@ -76,12 +76,12 @@ public class RecombeeDB {
 	}
 
 
-	public static List<String> getAllItem(RecombeeDBType db) {
+	public static List<ItemObject> getAllItem(RecombeeDBType db) {
 		return serviceInt.getAllItem(db);
 	}
 
 
-	public static List<String> getItemByType(RecombeeDBType db, String itemType) {
+	public static List<ItemObject> getItemByType(RecombeeDBType db, String itemType) {
 		return serviceInt.getItemsByType(db, itemType);
 	}
 
