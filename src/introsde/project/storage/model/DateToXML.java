@@ -10,6 +10,7 @@ public class DateToXML {
 	public static XMLGregorianCalendar GregorianCalendar(Date date
 			//, TimeZone zone
 			) {
+		
 	    XMLGregorianCalendar xmlGregorianCalendar = null;
 	    GregorianCalendar gregorianCalendar = new GregorianCalendar();
 	    gregorianCalendar.setTime(date);
