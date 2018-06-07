@@ -89,11 +89,11 @@ public interface StorageInterface {
 			@WebParam(name="itemName") String itemType
 			);
 	
-//	@WebMethod(operationName="initDB")
-//    @WebResult(name="boolean") 
-//	public boolean initDB(
-//			@WebParam(name="dbName") RecombeeDBType db
-//			);
+	@WebMethod(operationName="initDB")
+    @WebResult(name="boolean") 
+	public boolean initDB(
+			@WebParam(name="dbName") RecombeeDBType db
+			);
 //	
 //	@WebMethod(operationName="resetDB")
 //    @WebResult(name="boolean") 

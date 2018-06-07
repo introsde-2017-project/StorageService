@@ -86,10 +86,10 @@ public class RecombeeDB {
 	}
 
 
-//	public static boolean initDB(RecombeeDBType db) {
-//		return serviceInt.initBD(db);
-//	}
-//
+	public static boolean initDB(RecombeeDBType db) {
+		return serviceInt.initBD(db);
+	}
+
 //
 //	public static boolean resetDB(RecombeeDBType db) {
 //		return serviceInt.resetBD(db);

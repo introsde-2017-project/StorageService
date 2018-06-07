@@ -98,11 +98,11 @@ public class StorageImpl implements StorageInterface {
 	public List<ItemObject> getItemByType(RecombeeDBType db, String itemType) {
 		return RecombeeDB.getItemByType(db,itemType);
 	}
-//
-//	@Override
-//	public boolean initDB(RecombeeDBType db) {
-//		return RecombeeDB.initDB(db);
-//	}
+
+	@Override
+	public boolean initDB(RecombeeDBType db) {
+		return RecombeeDB.initDB(db);
+	}
 
 //	@Override
 //	public boolean resetDB(RecombeeDBType db) {
