@@ -23,23 +23,11 @@ public class LocalDB {
 	}
 	
 	public static List<FoodType> getFoodTypes() {
-//		List<String> l= new ArrayList<String>();
-//		for(FoodType t:serviceInt.getFoodTypes()) {
-//			l.add(t.value());
-//		}
-//		return l;
-		
 		return serviceInt.getFoodTypes();
 		
 	}
 	
 	public static List<MovieGen> getMovieGens() {
-		//List<String> l= new ArrayList<String>();
-		//for(MovieGen t:serviceInt.getMovieGens()) {
-		//	l.add(t.value());
-		//}
-		//return l;
-		
 		return serviceInt.getMovieGens();
 	}
 
@@ -57,28 +45,6 @@ public class LocalDB {
 	public static Person getPersonByToken(String token) {
 		return serviceInt.getPersonByToken(token);
 	}
-
-//	public static void addFoodRating(int personId, int foodId, double rating, Date timestemp) throws DatatypeConfigurationException {
-//		GregorianCalendar c = new GregorianCalendar();
-//		c.setTime(timestemp);
-//		XMLGregorianCalendar date = DatatypeFactory.newInstance().newXMLGregorianCalendar(c);
-//		serviceInt.addFoodRating(personId, foodId, rating, date);
-//	}
-//	
-//	public static void addMovieRating(int personId, int movieId, double rating, Date timestemp) throws DatatypeConfigurationException {
-//		GregorianCalendar c = new GregorianCalendar();
-//		c.setTime(timestemp);
-//		XMLGregorianCalendar date = DatatypeFactory.newInstance().newXMLGregorianCalendar(c);
-//		serviceInt.addMovieRating(personId, movieId, rating, date);
-//	}
-//
-//	public static Food addFood(Food f) {
-//		return serviceInt.setFood(f);
-//	}
-//
-//	public static Movie addMovie(Movie m) {
-//		return serviceInt.setMovie(m);
-//	}
 
 	
 }

@@ -35,17 +35,17 @@ public class RecombeeDB {
 		
 		List<String> itemType= new ArrayList<String>();
 		
-		//if add a user in food recombee data base
-		for(MovieGen m: person.getMovieGens()) {
+		// add a user in food recombee data base
+		for(MovieGen m: person.getMovieGens()) 
 			itemType.add(m.value());
-		}
+		
 		serviceInt.addUser(RecombeeDBType.MOVIE_DB, Integer.toString(person.getIdPerson()), itemType);
 
-		//else add user in movie DB
+		// add user in movie DB
 		itemType= new ArrayList<String>();
-		for(FoodType m: person.getFoodTypes()) {
+		for(FoodType m: person.getFoodTypes()) 
 			itemType.add(m.value());
-		}
+		
 		serviceInt.addUser(RecombeeDBType.FOOD_DB, Integer.toString(person.getIdPerson()), itemType);
 		
 	}
@@ -56,24 +56,10 @@ public class RecombeeDB {
 	}
 
 
-//	public static boolean modifyRating(RecombeeDBType db, Evaluation rating) {
-//		return serviceInt.modifyRating(db, rating);
-//	}
-
-
-//	public static ItemObject addNewItem(RecombeeDBType db, String itemName, String itemType, String location) {
-//		return serviceInt.additem(db, itemName, itemType, location);
-//		
-//	}
-
 
 	public static List<Evaluation> getUserRatings(RecombeeDBType db, Person person) {
 		return serviceInt.getUserRatings(db, Integer.toString(person.getIdPerson()));
 	}
-
-//	public static ItemObject getItem(RecombeeDBType db, String itemName) {
-//		return serviceInt.getItem(db, itemName);
-//	}
 
 
 	public static List<ItemObject> getAllItem(RecombeeDBType db) {

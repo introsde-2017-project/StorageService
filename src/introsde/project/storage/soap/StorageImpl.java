@@ -57,10 +57,6 @@ public class StorageImpl implements StorageInterface {
 		return LocalDB.getMovieGens();
 	}
 
-//	@Override
-//	public ItemObject addNewItem(RecombeeDBType db, String itemName, String itemType, String location) {
-//		return RecombeeDB.addNewItem(db, itemName, itemType, location);
-//	}
 
 	@Override
 	public boolean addNewRating(RecombeeDBType db, Evaluation rating) {	
@@ -84,11 +80,6 @@ public class StorageImpl implements StorageInterface {
 		
 	}
 
-//	@Override
-//	public ItemObject getItem(RecombeeDBType db, String itemName) {
-//		return RecombeeDB.getItem(db,itemName);
-//	}
-
 	@Override
 	public List<ItemObject> getAllItem(RecombeeDBType db) {
 		return RecombeeDB.getAllItem(db);
@@ -103,11 +94,6 @@ public class StorageImpl implements StorageInterface {
 	public boolean initDB(RecombeeDBType db) {
 		return RecombeeDB.initDB(db);
 	}
-
-//	@Override
-//	public boolean resetDB(RecombeeDBType db) {
-//		return RecombeeDB.resetDB(db);
-//	}
 
 	
 	

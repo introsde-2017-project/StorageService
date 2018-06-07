@@ -59,22 +59,7 @@ public interface StorageInterface {
 	
 	
 	///////recombee DB
-	
-//	@WebMethod(operationName="addNewItem")
-//    @WebResult(name="itemId") 
-//	public ItemObject addNewItem(
-//			@WebParam(name="dbName") RecombeeDBType db,
-//			@WebParam(name="itemName") String itemName,
-//			@WebParam(name="itemType") String itemType,
-//			@WebParam(name="location") String location
-//			);	
-//	
-//	@WebMethod(operationName="getItem")
-//    @WebResult(name="ListofPropertiesofItem") 
-//	public ItemObject getItem(
-//			@WebParam(name="dbName") RecombeeDBType db,
-//			@WebParam(name="itemName") String itemName
-//			);
+
 	
 	@WebMethod(operationName="getAllItem")
     @WebResult(name="ListofStrings") 
@@ -94,12 +79,7 @@ public interface StorageInterface {
 	public boolean initDB(
 			@WebParam(name="dbName") RecombeeDBType db
 			);
-//	
-//	@WebMethod(operationName="resetDB")
-//    @WebResult(name="boolean") 
-//	public boolean resetDB(
-//			@WebParam(name="dbName") RecombeeDBType db
-//			);
+
 	
 	
 	@WebMethod(operationName="addNewRating")
@@ -109,12 +89,6 @@ public interface StorageInterface {
     		@WebParam(name="evaluation") Evaluation rating
     		);
 	
-//	@WebMethod(operationName="modifyRating")
-//    @WebResult(name="boolean") 
-//    public boolean modifyRating(
-//    		@WebParam(name="dbName") RecombeeDBType db,
-//    		@WebParam(name="evaluation") Evaluation rating
-//    		);
 	
 	@WebMethod(operationName="getItemRatings")
     @WebResult(name="ratingList") 
