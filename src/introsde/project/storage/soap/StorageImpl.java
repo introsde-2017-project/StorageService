@@ -31,6 +31,16 @@ public class StorageImpl implements StorageInterface {
 	public Person getPerson(String username) {
 		return LocalDB.getPersonByU(username);
 	}
+	
+	@Override
+	public List<Person> getAllPerson() {
+		return LocalDB.getAllPerson();
+	}
+
+	@Override
+	public Person getPersonByToken(String token) {
+		return LocalDB.getPersonByToken(token);
+	}
 
 	@Override
 	public Person updatePerson(Person person) {
@@ -47,20 +57,16 @@ public class StorageImpl implements StorageInterface {
 		return LocalDB.getMovieGens();
 	}
 
-	@Override
-	public ItemObject addNewItem(RecombeeDBType db, String itemName, String itemType, String location) {
-		return RecombeeDB.addNewItem(db, itemName, itemType, location);
-	}
+//	@Override
+//	public ItemObject addNewItem(RecombeeDBType db, String itemName, String itemType, String location) {
+//		return RecombeeDB.addNewItem(db, itemName, itemType, location);
+//	}
 
 	@Override
 	public boolean addNewRating(RecombeeDBType db, Evaluation rating) {	
 		return RecombeeDB.addNewRating(db, rating);
 	}
 
-	@Override
-	public boolean modifyRating(RecombeeDBType db, Evaluation rating) {
-		return RecombeeDB.modifyRating(db, rating);
-	}
 
 	@Override
 	public List<Evaluation> getItemRatings(RecombeeDBType db, String itemName) {	
@@ -78,10 +84,10 @@ public class StorageImpl implements StorageInterface {
 		
 	}
 
-	@Override
-	public ItemObject getItem(RecombeeDBType db, String itemName) {
-		return RecombeeDB.getItem(db,itemName);
-	}
+//	@Override
+//	public ItemObject getItem(RecombeeDBType db, String itemName) {
+//		return RecombeeDB.getItem(db,itemName);
+//	}
 
 	@Override
 	public List<ItemObject> getAllItem(RecombeeDBType db) {
@@ -92,25 +98,17 @@ public class StorageImpl implements StorageInterface {
 	public List<ItemObject> getItemByType(RecombeeDBType db, String itemType) {
 		return RecombeeDB.getItemByType(db,itemType);
 	}
+//
+//	@Override
+//	public boolean initDB(RecombeeDBType db) {
+//		return RecombeeDB.initDB(db);
+//	}
 
-	@Override
-	public boolean initDB(RecombeeDBType db) {
-		return RecombeeDB.initDB(db);
-	}
+//	@Override
+//	public boolean resetDB(RecombeeDBType db) {
+//		return RecombeeDB.resetDB(db);
+//	}
 
-	@Override
-	public boolean resetDB(RecombeeDBType db) {
-		return RecombeeDB.resetDB(db);
-	}
-
-	@Override
-	public List<Person> getAllPerson() {
-		return LocalDB.getAllPerson();
-	}
-
-	@Override
-	public Person getPersonByToken(String token) {
-		return LocalDB.getPersonByToken(token);
-	}
+	
 	
 }

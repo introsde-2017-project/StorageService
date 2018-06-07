@@ -56,24 +56,24 @@ public class RecombeeDB {
 	}
 
 
-	public static boolean modifyRating(RecombeeDBType db, Evaluation rating) {
-		return serviceInt.modifyRating(db, rating);
-	}
+//	public static boolean modifyRating(RecombeeDBType db, Evaluation rating) {
+//		return serviceInt.modifyRating(db, rating);
+//	}
 
 
-	public static ItemObject addNewItem(RecombeeDBType db, String itemName, String itemType, String location) {
-		return serviceInt.additem(db, itemName, itemType, location);
-		
-	}
+//	public static ItemObject addNewItem(RecombeeDBType db, String itemName, String itemType, String location) {
+//		return serviceInt.additem(db, itemName, itemType, location);
+//		
+//	}
 
 
 	public static List<Evaluation> getUserRatings(RecombeeDBType db, Person person) {
 		return serviceInt.getUserRatings(db, Integer.toString(person.getIdPerson()));
 	}
 
-	public static ItemObject getItem(RecombeeDBType db, String itemName) {
-		return serviceInt.getItem(db, itemName);
-	}
+//	public static ItemObject getItem(RecombeeDBType db, String itemName) {
+//		return serviceInt.getItem(db, itemName);
+//	}
 
 
 	public static List<ItemObject> getAllItem(RecombeeDBType db) {
@@ -86,14 +86,14 @@ public class RecombeeDB {
 	}
 
 
-	public static boolean initDB(RecombeeDBType db) {
-		return serviceInt.initBD(db);
-	}
-
-
-	public static boolean resetDB(RecombeeDBType db) {
-		return serviceInt.resetBD(db);
-	}
+//	public static boolean initDB(RecombeeDBType db) {
+//		return serviceInt.initBD(db);
+//	}
+//
+//
+//	public static boolean resetDB(RecombeeDBType db) {
+//		return serviceInt.resetBD(db);
+//	}
 
 
 	
