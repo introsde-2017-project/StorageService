@@ -19,7 +19,7 @@ A) "Model" which has the following Classes:
 
  ## 1.DateToXML.java    
  ## 2.LocalDB.java    
-    * Method #1: `addPerson(Person p)`  it adds person to the database.    
+    * Method #1 `addPerson(Person p)`  it adds person to the database.    
     * Method #2 `getPersonByU(String username)` it gets person giving its username.  
     * Method #3 `getFoodTypes()` it returns all the food types in the list.  
     * Method #4 `getMovieGens()` it returns all the movies genere in the list.  
