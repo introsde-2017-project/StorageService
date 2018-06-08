@@ -26,6 +26,14 @@ A) "Model" which has the following Classes:
     * Method #5 `updatePerson(Person person)` it makes changes in the person object.  
     * Mthod  #6 `getAllPerson()` . it returns all the person in list.  
     * Method #7 `getPersonByToken(String token)` it returns person giving its token.  
- ## 3.RecombeeDB.java      
+ ## 3.RecombeeDB.java   
+    * Method #1 `addNewRating(RecombeeDBType db, Evaluation rating)` it adds new rating to the database.      
+    * Method #2 `getItemRatings(RecombeeDBType db, String itemName)` it returns item's rating from the specified database.  
+    * Method #3 `addUser(Person person)` it adds users to the database.   
+    * Method #4 `getRec(RecombeeDBType db, Person person, int quantity)`    
+    * Method #5 `getUserRatings(RecombeeDBType db, Person person)` it returns ratings of the specified person.    
+    * Mthod  #6 `getAllItem(RecombeeDBType db)` it returns all the items of the specified database(food,movie).  
+    * Method #7 `getItemByType(RecombeeDBType db, String itemType)`   
+ 
 
 
