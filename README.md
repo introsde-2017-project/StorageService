@@ -34,6 +34,22 @@ A) "Model" which has the following Classes:
     * Method #5 `getUserRatings(RecombeeDBType db, Person person)` it returns ratings of the specified person.    
     * Mthod  #6 `getAllItem(RecombeeDBType db)` it returns all the items of the specified database(food,movie).  
     * Method #7 `getItemByType(RecombeeDBType db, String itemType)`   
- 
-
-
+    
+B) "Model" which has the following Class and an interface:  
+ ## 1.StorageInterface.java  
+     It has some methods declared which are to be defined in the implementation class.  
+ ## 2.StorageImpl.java
+    * Method #1  `addNewPerson(Person person)`        
+    * Method #2  `getPerson(String username)`   
+    * Method #3  `getAllPerson()`     
+    * Method #4  `getPersonByToken(String token)`      
+    * Method #5  `updatePerson(Person person)`      
+    * Mthod  #6  `getFoodTypes()`  
+    * Method #7  `getMovieGens()`   
+    * Method #8  `addNewRating(RecombeeDBType db, Evaluation rating)`  
+    * Method #9  `getItemRatings(RecombeeDBType db, String itemName)`   
+    * Method #10 `getUserRatings(RecombeeDBType db, Person person)`  
+    * Method #11 `getRecommendations(RecombeeDBType db, Person person, int quantity) `  
+    * Method #12 `getAllItem(RecombeeDBType db)`  
+    * Method #13 `getItemByType(RecombeeDBType db, String itemType)`  
+    * Method #14 `initDB(RecombeeDBType db)`  
