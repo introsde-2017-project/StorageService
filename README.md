@@ -17,11 +17,11 @@ It recives all the requests from higher layes and redirect the request according
 Its a Soap Service which can be used via WSDL in order to save, modify, and get data like persisting new user to DB or rating for specific food/movie by a user.  
 
 ## Implementation:  
-### `Model`:  
+### `Model` 
 
-#### 1.DateToXML.java    
+ * 1. DateToXML.java    
    * used to convert a java.util.Date to XMLGregorianCalendar.
-#### 2.LocalDB.java    
+ * 2. LocalDB.java    
    * Method #1 `addPerson(Person p)`  it adds person to the database.    
    * Method #2 `getPersonByU(String username)` it gets person giving its username.  
    * Method #3 `getFoodTypes()` it returns all the food types in the list.  
@@ -29,7 +29,7 @@ Its a Soap Service which can be used via WSDL in order to save, modify, and get 
    * Method #5 `updatePerson(Person person)` it makes changes in the person object.  
    * Mthod  #6 `getAllPerson()` . it returns all the person in list.  
    * Method #7 `getPersonByToken(String token)` it returns person giving its token.  
-#### 3.RecombeeDB.java   
+ * 3. RecombeeDB.java   
    * Method #1 `addNewRating(RecombeeDBType db, Evaluation rating)` it adds new rating to the database.      
    * Method #2 `getItemRatings(RecombeeDBType db, String itemName)` it returns item's rating from the specified database.  
    * Method #3 `addUser(Person person)` it adds users to the database.   
@@ -38,11 +38,11 @@ Its a Soap Service which can be used via WSDL in order to save, modify, and get 
    * Mthod  #6 `getAllItem(RecombeeDBType db)` it returns all the items of the specified database(food,movie).  
    * Method #7 `getItemByType(RecombeeDBType db, String itemType)`   
     
-### `Soap`:  
-consist of a Class and an interface which defines which operations are allowed to user.  
-#### 1.StorageInterface.java  
-Interface define some methods which are to be override in the implementation class.  
-#### 2.StorageImpl.java
+### `Soap` 
+  Consist of a Class and an interface which defines which operations are allowed to user.  
+ * 1. StorageInterface.java  
+  Interface define some methods which are to be override in the implementation class.  
+ * 2. StorageImpl.java
    * Method #1  `addNewPerson(Person person)`        
    * Method #2  `getPerson(String username)`   
    * Method #3  `getAllPerson()`     
