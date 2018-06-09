@@ -84,7 +84,7 @@ public interface RecombeeInterface {
 
     /**
      * 
-     * @param itemName
+     * @param itemType
      * @param dbName
      * @return
      *     returns java.util.List<introsde.project.adopter.recombee.soap.ItemObject>
@@ -97,8 +97,8 @@ public interface RecombeeInterface {
     public List<ItemObject> getItemsByType(
         @WebParam(name = "dbName", targetNamespace = "")
         RecombeeDBType dbName,
-        @WebParam(name = "itemName", targetNamespace = "")
-        String itemName);
+        @WebParam(name = "itemType", targetNamespace = "")
+        String itemType);
 
     /**
      * 

@@ -27,6 +27,21 @@ public interface UserInterface {
 
     /**
      * 
+     * @param person
+     * @return
+     *     returns introsde.project.data.local.soap.Person
+     */
+    @WebMethod
+    @WebResult(name = "Person", targetNamespace = "")
+    @RequestWrapper(localName = "addPerson", targetNamespace = "http://soap.local.data.project.introsde/", className = "introsde.project.data.local.soap.AddPerson")
+    @ResponseWrapper(localName = "addPersonResponse", targetNamespace = "http://soap.local.data.project.introsde/", className = "introsde.project.data.local.soap.AddPersonResponse")
+    @Action(input = "http://soap.local.data.project.introsde/UserInterface/addPersonRequest", output = "http://soap.local.data.project.introsde/UserInterface/addPersonResponse")
+    public Person addPerson(
+        @WebParam(name = "person", targetNamespace = "")
+        Person person);
+
+    /**
+     * 
      * @param username
      * @return
      *     returns introsde.project.data.local.soap.Person
@@ -39,6 +54,33 @@ public interface UserInterface {
     public Person getPerson(
         @WebParam(name = "username", targetNamespace = "")
         String username);
+
+    /**
+     * 
+     * @param token
+     * @return
+     *     returns introsde.project.data.local.soap.Person
+     */
+    @WebMethod
+    @WebResult(name = "Person", targetNamespace = "")
+    @RequestWrapper(localName = "getPersonByToken", targetNamespace = "http://soap.local.data.project.introsde/", className = "introsde.project.data.local.soap.GetPersonByToken")
+    @ResponseWrapper(localName = "getPersonByTokenResponse", targetNamespace = "http://soap.local.data.project.introsde/", className = "introsde.project.data.local.soap.GetPersonByTokenResponse")
+    @Action(input = "http://soap.local.data.project.introsde/UserInterface/getPersonByTokenRequest", output = "http://soap.local.data.project.introsde/UserInterface/getPersonByTokenResponse")
+    public Person getPersonByToken(
+        @WebParam(name = "token", targetNamespace = "")
+        String token);
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<introsde.project.data.local.soap.Person>
+     */
+    @WebMethod
+    @WebResult(name = "PersonList", targetNamespace = "")
+    @RequestWrapper(localName = "getAllPerson", targetNamespace = "http://soap.local.data.project.introsde/", className = "introsde.project.data.local.soap.GetAllPerson")
+    @ResponseWrapper(localName = "getAllPersonResponse", targetNamespace = "http://soap.local.data.project.introsde/", className = "introsde.project.data.local.soap.GetAllPersonResponse")
+    @Action(input = "http://soap.local.data.project.introsde/UserInterface/getAllPersonRequest", output = "http://soap.local.data.project.introsde/UserInterface/getAllPersonResponse")
+    public List<Person> getAllPerson();
 
     /**
      * 
@@ -78,47 +120,5 @@ public interface UserInterface {
     @ResponseWrapper(localName = "getMovieGensResponse", targetNamespace = "http://soap.local.data.project.introsde/", className = "introsde.project.data.local.soap.GetMovieGensResponse")
     @Action(input = "http://soap.local.data.project.introsde/UserInterface/getMovieGensRequest", output = "http://soap.local.data.project.introsde/UserInterface/getMovieGensResponse")
     public List<MovieGen> getMovieGens();
-
-    /**
-     * 
-     * @return
-     *     returns java.util.List<introsde.project.data.local.soap.Person>
-     */
-    @WebMethod
-    @WebResult(name = "PersonList", targetNamespace = "")
-    @RequestWrapper(localName = "getAllPerson", targetNamespace = "http://soap.local.data.project.introsde/", className = "introsde.project.data.local.soap.GetAllPerson")
-    @ResponseWrapper(localName = "getAllPersonResponse", targetNamespace = "http://soap.local.data.project.introsde/", className = "introsde.project.data.local.soap.GetAllPersonResponse")
-    @Action(input = "http://soap.local.data.project.introsde/UserInterface/getAllPersonRequest", output = "http://soap.local.data.project.introsde/UserInterface/getAllPersonResponse")
-    public List<Person> getAllPerson();
-
-    /**
-     * 
-     * @param token
-     * @return
-     *     returns introsde.project.data.local.soap.Person
-     */
-    @WebMethod
-    @WebResult(name = "Person", targetNamespace = "")
-    @RequestWrapper(localName = "getPersonByToken", targetNamespace = "http://soap.local.data.project.introsde/", className = "introsde.project.data.local.soap.GetPersonByToken")
-    @ResponseWrapper(localName = "getPersonByTokenResponse", targetNamespace = "http://soap.local.data.project.introsde/", className = "introsde.project.data.local.soap.GetPersonByTokenResponse")
-    @Action(input = "http://soap.local.data.project.introsde/UserInterface/getPersonByTokenRequest", output = "http://soap.local.data.project.introsde/UserInterface/getPersonByTokenResponse")
-    public Person getPersonByToken(
-        @WebParam(name = "token", targetNamespace = "")
-        String token);
-
-    /**
-     * 
-     * @param person
-     * @return
-     *     returns introsde.project.data.local.soap.Person
-     */
-    @WebMethod
-    @WebResult(name = "Person", targetNamespace = "")
-    @RequestWrapper(localName = "addPerson", targetNamespace = "http://soap.local.data.project.introsde/", className = "introsde.project.data.local.soap.AddPerson")
-    @ResponseWrapper(localName = "addPersonResponse", targetNamespace = "http://soap.local.data.project.introsde/", className = "introsde.project.data.local.soap.AddPersonResponse")
-    @Action(input = "http://soap.local.data.project.introsde/UserInterface/addPersonRequest", output = "http://soap.local.data.project.introsde/UserInterface/addPersonResponse")
-    public Person addPerson(
-        @WebParam(name = "person", targetNamespace = "")
-        Person person);
 
 }

@@ -18,7 +18,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="dbName" type="{http://soap.recombee.adopter.project.introsde/}recombeeDBType" minOccurs="0"/>
- *         &lt;element name="itemName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="itemType" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -30,13 +30,13 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "getItemsByType", propOrder = {
     "dbName",
-    "itemName"
+    "itemType"
 })
 public class GetItemsByType {
 
     @XmlSchemaType(name = "string")
     protected RecombeeDBType dbName;
-    protected String itemName;
+    protected String itemType;
 
     /**
      * Gets the value of the dbName property.
@@ -63,27 +63,27 @@ public class GetItemsByType {
     }
 
     /**
-     * Gets the value of the itemName property.
+     * Gets the value of the itemType property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getItemName() {
-        return itemName;
+    public String getItemType() {
+        return itemType;
     }
 
     /**
-     * Sets the value of the itemName property.
+     * Sets the value of the itemType property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setItemName(String value) {
-        this.itemName = value;
+    public void setItemType(String value) {
+        this.itemType = value;
     }
 
 }
