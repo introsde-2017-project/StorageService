@@ -39,9 +39,9 @@ public interface StorageInterface {
 	public Person getPersonByToken(
 			@WebParam(name="token") String token
 			);
-	@WebMethod(operationName="getAllUser")
-    @WebResult(name="PersonList") 
-	public List<Person> getAllPerson();
+//	@WebMethod(operationName="getAllUser")
+//    @WebResult(name="PersonList") 
+//	public List<Person> getAllPerson();
 	
 	@WebMethod(operationName="updateUser")
     @WebResult(name="Person") 

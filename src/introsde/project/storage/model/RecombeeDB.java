@@ -29,10 +29,7 @@ public class RecombeeDB {
 
 
 	//adding a user in recombee database
-	public static void addUser(Person person) {
-		if(LocalDB.getPersonByU(person.getUserName())==null) 
-			return;
-		
+	public static void addUser(Person person){
 		List<String> itemType= new ArrayList<String>();
 		
 		// add a user in food recombee data base

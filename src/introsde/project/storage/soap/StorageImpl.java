@@ -32,10 +32,10 @@ public class StorageImpl implements StorageInterface {
 		return LocalDB.getPersonByU(username);
 	}
 	
-	@Override
-	public List<Person> getAllPerson() {
-		return LocalDB.getAllPerson();
-	}
+//	@Override
+//	public List<Person> getAllPerson() {
+//		return LocalDB.getAllPerson();
+//	}
 
 	@Override
 	public Person getPersonByToken(String token) {
