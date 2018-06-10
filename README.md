@@ -1,15 +1,8 @@
 # introsde-2017-project-StorageService
- 
-NAME: Cheema Danish Asghar  
-EMAIL: danishasghar.cheema@studenti.unitn.it  
-
-Group Partner by:  
-NAME: Jan Main muhammad Faheem  
-EMAIL: main.jan@unitn.it  
 
 heroku WSDL ULR: http://storage-introsde-2018.herokuapp.com/ws/storage?wsdl  
-Github  ripo: https://github.com/introsde-2017-project/StorageService  
-Project WIKI: https://github.com/introsde-2017-project/Wiki  
+API Documantation: https://documenter.getpostman.com/view/2954866/RWEcNfmJ  
+Project Documantation: https://github.com/introsde-2017-project/documentation#introsde-project-2017  
 
 ## introduction:
 This is a storage layer for the `knowYourCity` app which i uses for combine all the lower database layes, in my case recombee layer and local data layer,  
